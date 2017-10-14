@@ -1,0 +1,83 @@
+@CHARSET "utf-8";
+
+.header-head {
+  background-color: #2E4358;
+  height: 80px;
+  background-image: url("../images/LOGO_Web_40x240.png");
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+}
+
+.header-head-title {
+  float: left;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding-left: 300px;
+  padding-top: 36px;
+}
+
+.header-head-language {
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.header-head-userInformation {
+  overflow: hidden;
+  float: right;
+  line-height: 20px;
+  height: 20px;
+  margin-top: 54px;
+  padding-right: 0px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.user-picture {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.user-name {
+  float: right;
+  margin-right: 30px;
+}
+
+.user-logout {
+  float: right;
+}
+
+.user-logout a{
+  text-decoration: none;
+  background-color: #2E4358;
+  color: #FFFFFF;
+}
+
+.header-main {
+  line-height: 40px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: #2E4358;
+  height: 40px;
+}
+
+.question {
+  float: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #D2DAE3;
+  cursor: pointer;
+}
+
+.exam{
+  float: left;
+  margin-left: 104px;
+  cursor: pointer;
+}
+
+.header-main a{
+  color: #2E4358;
+}

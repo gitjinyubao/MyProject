@@ -1,0 +1,224 @@
+@CHARSET "utf-8";
+.mian {
+  width: 1280px;
+  height: 760px;
+  margin-left: 40px;
+}
+
+.question {
+  float: left;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.que-middle {
+  overflow: hidden;
+  background-color: #D2DAE3;
+  height: 660px;
+}
+
+.que-middle-head {
+  overflow: hidden;
+  font-size: 12px;
+  color: #0A0A0A;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.que-middle-main {
+  overflow: hidden;
+  height: 580px;
+  background-color: #FFFFFF;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.question-id {
+  overflow: hidden;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #0A0A0A;
+}
+
+.id-title {
+  float: left;
+  margin-top: 8px;
+}
+
+.id-number {
+  float: left;
+  margin-left: 40px;
+}
+
+.id-number input {
+  width: 130px;
+  height: 30px;
+  outline: none;;
+  border: 1px solid #2E4358;
+  border-radius: 3px;
+  padding-left: 20px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #0A0A0A;
+}
+
+.que-th {
+  float: left;
+  margin-top:30px;
+  font-size: 14px;
+  line-height:100px;
+}
+
+.question-update {
+  overflow: hidden;
+  float: left;
+  margin-top: 30px;
+  margin-left: 58px;
+  font-size: 14px;
+  color: #0A0A0A;
+  height: 100px;
+}
+
+.question-update textarea {
+  border: 1px solid #2E4358;
+  border-radius: 3px;
+  outline: none;
+  width: 500px;
+  overflow:hidden;
+  resize:none;
+}
+
+.question-title {
+  float: left;
+  margin-top: 10px;
+  word-wrap:break-word; 
+  word-break:break-all;
+  margin-bottom: 20px;
+}
+
+.tab {
+  margin-bottom: 20px;
+}
+
+.empty-table {
+  height: 80px;
+  width: 480px;
+  border-collapse: collapse;
+  border: 1px solid #2E4358;
+}
+
+.answer {
+  float: left;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #0A0A0A;
+}
+
+.answer-content {
+  float: left;
+  margin-left: 70px;
+  width: 500px;
+}
+
+.content-a {
+  float: right;
+  width: 500px;
+  font-size: 14px;
+  color: #0A0A0A;
+}
+
+.content-b {
+  float: right;
+  width: 500px;
+  margin-top: 15px;
+}
+
+.content-c {
+  float: right;
+  width: 500px;
+  margin-top: 15px;
+}
+
+.content-d {
+  float: right;
+  width: 500px;
+  margin-top: 15px;
+}
+
+.radioBut {
+  float: left;
+  margin-right: 10px;
+}
+
+.selector {
+  float: left;
+  margin-right: 10px;
+}
+
+.answ {
+  float: right;
+  width: 440px;
+  height: 20px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #2E4358;
+  padding-left: 10px;
+}
+.answer-th {
+  float: left;
+}
+
+.button {
+  float: left;
+  margin-top: 50px;
+  margin-left: 160px;
+}
+
+.create-but {
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 150px;
+  background-color: #FE9901;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.cancel-but {
+  float: left;
+  margin-left: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 150px;
+  background-color: #FE9901;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.excuteMessage {
+  background-color: #FFFFFF;
+  position: absolute;
+  width: 300px;
+  color: #FE9901;
+  font-size: 25px;
+  height: 100px;
+  line-height: 100px;
+  left: 630px;
+  z-index: 100;
+  top: 50px;
+  border: 3px solid #FE9901;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
