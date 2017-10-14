@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.augmentum.oes.model.Questions">
+    <resultMap type="Questions" id="questionsMap">
+        <id column="id" property="id"/>
+        <result column="id_number" property="idNumber"/>
+        <result column="que_score" property="queScore"/>
+        <result column="que_title" property="queTitle" />
+        <result column="que_a_content" property="queA" />
+        <result column="que_b_content" property="queB" />
+        <result column="que_c_content" property="queC" />
+        <result column="que_d_content" property="queD" />
+        <result column="que_answer" property="queAnswer" />
+        <result column="que_create_time" property="queCreateTime" />
+        <result column="que_edit_time" property="queEditTime" />
+        <result column="update_time" property="queUpdateTime" />
+        <result column="cont_sys_id" property="contSysId" />
+        <result column="que_status" property="status" />
+    </resultMap>
+
+    <select id="fuzzyQuery" parameterType="Pagination" resultMap="questionsMap">
+        <![CDATA[
+            SELECT * FROM questions WHERE que_status IS NULL
+        ]]>
+
+        <if test="keyWord != ''">
+            <![CDATA[
+                AND que_title LIKE concat(concat('%',#{keyWord}),'%')
+            ]]>
+        </if>
+
+        <![CDATA[
+            ORDER BY id
+        ]]>
+
+        <if test="orderId == 0">
+           <![CDATA[
+               DESC
+           ]]>
+        </if>
+
+        <if test="orderId != 0">
+           <![CDATA[
+               ASC
+           ]]>
+        </if>
+
+        <![CDATA[
+            LIMIT #{offset} , #{pageSize}
+        ]]>
+    </select>
+
+    <select id="searchQuestionsById" parameterType="int" resultMap="questionsMap">
+            <if test="_parameter == 0">
+                <![CDATA[
+                    SELECT * FROM questions ORDER BY id DESC LIMIT 1
+                ]]>
+            </if>
+
+            <if test="_parameter != 0">
+                <![CDATA[
+                    SELECT * FROM questions WHERE id = #{_parameter};
+                ]]>
+            </if>
+    </select>
+    
+    <select id="getQuestionsTotalCountFuzz" parameterType="String" resultType="int">
+        <![CDATA[ 
+            SELECT COUNT(id) AS questions_total_count FROM questions WHERE que_status IS NULL
+        ]]>
+
+        <if test="_parameter != ''">
+            <![CDATA[
+                AND que_title LIKE concat(concat('%',#{_parameter}),'%')
+            ]]>
+        </if>
+    </select>
+
+    <insert id="saveQuestions" useGeneratedKeys="true" parameterType="Questions" keyProperty="id">
+        <![CDATA[
+            INSERT INTO questions(que_title, que_a_content, que_b_content, que_c_content, que_d_content, que_answer, que_create_time, cont_sys_id, id_number) values(#{queTitle}, #{queA}, #{queB}, #{queC}, #{queD}, #{queAnswer}, NOW(), #{contSysId}, #{idNumber})
+        ]]>
+    </insert>
+
+    <update id="updateQuestions"  parameterType="Questions">
+        <![CDATA[
+            UPDATE questions SET que_title = #{queTitle} , que_a_content = #{queA} , que_b_content = #{queB} , que_c_content = #{queC} , que_d_content = #{queD} , que_answer = #{queAnswer} , que_edit_time = NOW() , cont_sys_id = #{contSysId} , id_number = #{idNumber} WHERE id = #{id}
+        ]]>
+    </update>
+
+    <delete id="deleteQueById" parameterType="int">
+        <![CDATA[
+            UPDATE questions SET que_status = 0 WHERE id = #{_parameter}
+        ]]>
+    </delete>
+
+    <update id="batchDelete" parameterType="String">
+        <![CDATA[
+            UPDATE questions SET que_status = 0 WHERE id in ( ${_parameter} )
+        ]]>
+    </update>
+</mapper>
