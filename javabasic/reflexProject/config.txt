@@ -1,0 +1,2 @@
+className=configTest.Teacher
+methodName=love
