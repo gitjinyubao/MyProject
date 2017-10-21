@@ -1,0 +1,5 @@
+将server那里使用多线程，就可以达到为多个client服务；socket对象作为参数传入
+while(true) {
+Socket s = ss.accept();
+Thread t = Thread(new UesrThead(s));
+}
