@@ -11,12 +11,10 @@ public class DBUtil {
 	public static Connection con = null;
 	
 	static {
-		// Map<String, String> mapProperties = new LoadPropertiesUtil().getPropertiesInfo("resource/jdbc.properties");
+		Map<String, String> mapProperties = new LoadPropertiesUtil().getPropertiesInfo(ConstantUtil.PROPERTY_PATH);
 		try {
-			//Class.forName(mapProperties.get("driver"));
-			// con = DriverManager.getConnection(mapProperties.get("url"), mapProperties.get("username"), mapProperties.get("password"));
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "1934jy26");
+			Class.forName(mapProperties.get("driver"));
+			con = DriverManager.getConnection(mapProperties.get("url"), mapProperties.get("username"), mapProperties.get("password"));
 		}
 		catch (SQLException sqle) {
 			sqle.printStackTrace();

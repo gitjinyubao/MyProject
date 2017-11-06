@@ -3,6 +3,7 @@ package comman.jdbc;
 import java.sql.Connection;
 import java.util.LinkedList;
 
+import utils.ConstantUtil;
 import utils.DBUtil;
 import utils.LoadPropertiesUtil;
 
@@ -16,8 +17,7 @@ public class DataPool {
 	
 	static {
 		try {	
-			// int maxConNum = Integer.parseInt(new LoadPropertiesUtil().getPropertiesInfo("resource/jdbc.properties").get("maxNum"));
-			int maxConNum = 100;
+			int maxConNum = Integer.parseInt(new LoadPropertiesUtil().getPropertiesInfo(ConstantUtil.PROPERTY_PATH).get("maxNum"));
 			for (int i = 0; i < maxConNum; i++) {
 				Connection con = DBUtil.getCon(); //得到一个连接
 				DataPool.pool.add(con);
