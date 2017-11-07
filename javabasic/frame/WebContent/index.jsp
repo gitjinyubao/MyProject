@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="student/list.action" method="post">
+	<form action="student/List.action" method="post">
 		<input type="submit" value="确认">
 	</form>
 </body>

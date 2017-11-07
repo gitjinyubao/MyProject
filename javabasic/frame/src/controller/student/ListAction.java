@@ -10,9 +10,19 @@ import controller.Controller;
 import dao.StudentDao;
 import dao.impl.StudentDaoImpl;
 import model.Student;
+import service.StudentService;
 
 public class ListAction implements Controller {
+	private StudentService studentServerce;
 	
+	public StudentService getStudentServerce() {
+		return studentServerce;
+	}
+
+	public void setStudentServerce(StudentService studentServerce) {
+		this.studentServerce = studentServerce;
+	}
+
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		StudentDao sd = new StudentDaoImpl();

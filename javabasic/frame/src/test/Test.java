@@ -2,13 +2,14 @@ package test;
 
 import java.util.List;
 
-import comman.ioc.ClassPathApplicationContext;
+import comman.spring.iocdi.ClassPathApplicationContext;
 import dao.StuScoreDao;
 import dao.StudentDao;
 import dao.impl.StuScoreDaoImpl;
 import dao.impl.StudentDaoImpl;
 import model.StuScore;
 import model.Student;
+import service.StudentService;
 
 public class Test {
 	public static void main(String[] args) {
@@ -29,9 +30,14 @@ public class Test {
 			System.out.println(ss.toString());
 		}*/
 		
-		// ≤‚ ‘IOC
-		ClassPathApplicationContext cs = new ClassPathApplicationContext("ApplicationContext.xml");
+		// ≤‚ ‘IOCOne
+		/*ClassPathApplicationContext cs = new ClassPathApplicationContext("ApplicationContext.xml");
 		Student s = (Student) cs.getBean("student");
-		System.out.println(s);
+		System.out.println(s);*/
+		
+		// ≤‚ ‘IOCTwo
+		ClassPathApplicationContext cs = new ClassPathApplicationContext();
+		StudentService s = (StudentService) cs.getBean("studentService");
+		System.out.println(s.getStudentDao());
 	}
 }

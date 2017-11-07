@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="student" class="model.Student" scope="prototype">
+	</bean>
+	
+	<bean id="studentDao" class="dao.impl.StudentDaoImpl">
+	</bean>
+	
+	<bean id= "studentService" class="service.StudentService">
+		<property bean="studentDao" name="studentDao"></property>
+	</bean>
+</beans>

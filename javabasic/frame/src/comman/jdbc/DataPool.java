@@ -17,7 +17,7 @@ public class DataPool {
 	
 	static {
 		try {	
-			int maxConNum = Integer.parseInt(new LoadPropertiesUtil().getPropertiesInfo(ConstantUtil.PROPERTY_PATH).get("maxNum"));
+			int maxConNum = Integer.parseInt(LoadPropertiesUtil.getPropertiesInfo(ConstantUtil.JDBC_PROPERTY_PATH).get("maxNum"));
 			for (int i = 0; i < maxConNum; i++) {
 				Connection con = DBUtil.getCon(); //得到一个连接
 				DataPool.pool.add(con);

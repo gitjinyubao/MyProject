@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class LoadPropertiesUtil {
 	
-	public Map<String, String> getPropertiesInfo(String fileName) {
+	public static Map<String, String> getPropertiesInfo(String fileName) {
 		// 存储文件的详细信息
 		Map<String, String> map = new HashMap<String, String>();
 		

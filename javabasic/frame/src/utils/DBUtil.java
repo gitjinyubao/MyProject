@@ -11,7 +11,7 @@ public class DBUtil {
 	public static Connection con = null;
 	
 	static {
-		Map<String, String> mapProperties = new LoadPropertiesUtil().getPropertiesInfo(ConstantUtil.PROPERTY_PATH);
+		Map<String, String> mapProperties = LoadPropertiesUtil.getPropertiesInfo(ConstantUtil.JDBC_PROPERTY_PATH);
 		try {
 			Class.forName(mapProperties.get("driver"));
 			con = DriverManager.getConnection(mapProperties.get("url"), mapProperties.get("username"), mapProperties.get("password"));
@@ -42,10 +42,6 @@ public class DBUtil {
 					Statement st = (Statement) o;
 					st.close();
 				}
-				/*if ("Connection".indexOf(ObjectName) != -1) {
-					Connection con = (Connection) o;
-					con.close();
-				}*/
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
