@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml-stylesheet type="text/css" href="a.css" ?>
+<!-- 1.不要 随便换行（良好代码风格在xml中可能带来歧义）
+     2.xml书写完毕，记事本会按照默认的编码进行保存在硬盘上，当浏览器打开xml时，会按照
+            声明的encoding编码打开文件，于是可能会出现乱码：因为记事本保存的编码格式和浏览器解析时候的编码格式不同
+-->
+<soft>
+	<a id="a">
+		<c>中国</c>
+	</a>
+	<b id="b">
+		<c>xxx</c>
+	</b>
+</soft>

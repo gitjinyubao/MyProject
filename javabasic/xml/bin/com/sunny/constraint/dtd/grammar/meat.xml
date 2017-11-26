@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312" standalone="yes" ?>
+<!DOCTYPE 购物篮 [
+    <!ENTITY price "50元">
+	<!ELEMENT 肉 EMPTY>
+	<!ATTLIST 肉 品种 (鸡肉|猪肉|羊肉) "鸡肉">
+	<!ELEMENT 饮料 (价钱)>
+	<!ELEMENT 价钱 (PCDATA)>
+]>
+<!-- 采用枚举和默认结合的方式 -->
+
+<购物篮>
+	<肉 品种="猪肉"/>
+	<肉 />
+	<饮料>
+		<price>&price;</price> <!-- 要加上分号 -->
+	</饮料>
+</购物篮>
