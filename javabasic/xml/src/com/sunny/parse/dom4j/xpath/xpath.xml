@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<books> 
+  <book id="a" userName="david" password="123"> 
+    <author>alice</author>  
+    <price>50</price>  
+    <name>js</name>  
+    <priceNew>209</priceNew>  
+    <价格>209</价格> 
+  </book>  
+  <book id="b"> 
+    <author>david</author>  
+    <price>309</price>  
+    <price>30</price>  
+    <name>java</name> 
+  </book> 
+</books>
