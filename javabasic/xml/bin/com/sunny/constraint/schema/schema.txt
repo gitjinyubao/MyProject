@@ -1,0 +1,113 @@
+Schema和DTD的区别 
+	Schema是对XML文档结构的定义和描述，其主要的作用是用来约束XML文件，
+	并验证XML文件有效性。DTD的作用是定义XML的合法构建模块，
+          它使用一系列的合法元素来定义文档结构。它们之间的区别有下面几点：
+	1、Schema本身也是XML文档，DTD定义跟XML没有什么关系，Schema在理解和实际应用有很多的好处。
+	2、DTD文档的结构是“平铺型”的，如果定义复杂的XML文档，很难把握各元素之间的嵌套关系；
+	  Schema文档结构性强，各元素之间的嵌套关系非常直观。
+	3、DTD只能指定元素含有文本，不能定义元素文本的具体类型，如字符型、整型、日期型、自定义类型等。
+	  Schema在这方面比DTD强大。
+	4、Schema支持元素节点顺序的描述，DTD没有提供无序情况的描述，要定义无序必需穷举排列的所有情况。
+	  Schema可以利用xs:all来表示无序的情况。
+	5、对命名空间的支持。DTD无法利用XML的命名空间，Schema很好满足命名空间。
+	     并且，Schema还提供了include和import两种引用命名空间的方法。
+
+Schema约束快速入门      
+	1、 XML Schema文件自身就是一个XML文件，但它的扩展名通常为.xsd。 
+	2、一个XML Schema文档通常称之为模式文档（约束文档），遵循这个文档写的xml文件称之为实例文档。 
+	3、 和XML文件一样，一个XML Schema文档也必须有一个根节点，但这个根节点的名称为Schema。 
+	4、 编写了一个XML Schema约束文档后，通常需要把这个文件中的声明的元素绑定到一个URI地址上，在XML Schema技术中有一个专业属于来描述这个过程，即把XML Schema文档声明的元素绑定到一个名称空间上，以后XML文件姐可以通过这个URI（即名称空间）来告诉解析引擎，xml文档中编写的元素来自那里，被谁约束。
+
+EG：book.xsd文件：
+    <?xml version="1.0" encoding="UTF-8" ?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"   targetNamespace="http://www. itcast.cn" elementFormDefault="qualified">   
+	<xs:element name='书架' >
+	<xs:complexType>
+	<xs:sequence maxOccurs='unbounded' >
+	<xs:element name='书' >
+	<xs:complexType>
+	<xs:sequence>
+	<xs:element name='书名' type='xs:string' />
+	<xs:element name='作者' type='xs:string' />
+	<xs:element name='售价' type='xs:string' />
+	</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	</xs:element> </xs:schema>
+	
+引入Schema约束文档的book.xml文件：
+	<?xml version="1.0" encoding="UTF-8"?>
+	<itcast:书架 xmlns:itcast="http://www.itcast.cn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=“http://www.itcast.cn book.xsd">   
+	<itcast:书>       
+	<itcast:书名>spark核心分析</itcast:书名>       
+	<itcast:作者>zhaojw</itcast:作者>       
+	<itcast:售价>28.00元</itcast:售价>   
+	</itcast:书>
+	</itcast:书架>
+
+二、名称空间的概念 
+1、在XML Schema中，每个约束模式文档都可以被赋以一个唯一的名称空间，
+      名称空间用一个唯一的URI（Uniform Resource Identifier），
+      在XML文件中书写标签时，可以通过名称空间声明（xmlns），来声明当前编写的标签来自哪个Schema约束文档。
+      如：
+      <itcast:书架 xmlns:itcast=“http://www.itcast.cn”>       
+      <itcast:书>……</itcast:书>   
+	  </itcast:书架>
+	    此处使用itcast来指向声明的名称，以便后面对名称空间的引用。
+	
+2、注意：名称空间的名字语法容易让人混淆，尽管以http://开始，那个URI并不只想一个包含模式定义的文件。
+      事实上，这个URI：http://www.itcast.cn根本没有指向任何文件，只是一个分配的名字。
+      
+三、使用名称空间引入Schema 
+1、为了在一个XML文档中声明它所遵循的Schema文件的具体位置，
+      通常需要在XML文档中的根节点中使用schemaLocation属性来指定。
+   <itcast:书架 xmlns:itcast="http://www.itcast.cn" xmlns:xsi=="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=“http://www.itcast.cn book.xsd">
+
+2、schemaLocation次属性有两个值。第一个值是需要使用的名称空间。
+      第二个值是供命名空间使用的XML Schema的位置，两者之间用空格分隔。 
+3、注意：在使用schemaLocation属性时，也需要指定该属性来自哪里。 
+
+四、使用默认名称空间 
+1、基本格式：xmlns=”URI” 
+2、举例：
+	<书架 xmlns="http://www.it315.org/xmlbook/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=“http://www.itcast.cn book.xsd">
+ 	<书>       
+	<书名>spark核心分析</书名>       
+	<作者>zhaojw</作者>       
+	<售价>28.00元</售价>       
+ 	</书>   
+	<书架>
+	
+五、使用名称空间引入多个XML Schema文档 
+       文件清单：book.xml
+   <?xml version="1.0" encoding="UTF-8"?> <书架 xmlns="http://www.it315.org/xmlbook/schema"     xmlns:demo="http://www.it315.org/demo/schema"     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     xsi:schemaLocation="http://www.it315.org/xmlbook/schema                 http://www.it315.org/xmlbook.xsd         http://www.it315.org/demo/schema http://www.it315.org/demo.xsd">   
+   <书>       
+   <书名>spark核心分析</书名>       
+   <作者>zhaojw</作者>       
+   <售价 demo:币种=”人民币”>28.00元</售价>   
+   </书>
+   </书架>
+
+六、不实用名称空间引入XML Schema文档 
+文件清单：book.xml
+	<?xml version="1.0" encoding="UTF-8"?> <书架 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     xsi:noNamespaceSchemaLocation="xmlbook.xsd">   
+	<书>       
+	<书名>spark核心分析</书名>       
+	<作者>zhaojw</作者>       
+	<售价>28.00元</售价>   
+	</书>
+	</书架>
+	
+七、在XML Schema文档中声明名称空间
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www. itcast.cn" elementFormDefault="qualified">
+	<xs:schema>
+	
+1、 targetNameSpace元素用于指定Schema文档中声明的元素属于那个名称空间。 
+2、elementFormDefault元素用于指定，该Schema文档中声明的跟元素以及所有子元素
+      都属于targetNameSpace所指定的名称空间。
+      
+      
+      
+      

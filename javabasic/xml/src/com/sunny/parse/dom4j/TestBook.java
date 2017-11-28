@@ -14,7 +14,6 @@ import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -74,6 +73,7 @@ public class TestBook {
 	}
 	
 	// 在第一本书指定位置添加一个新的售价节点
+	@SuppressWarnings("unchecked")
 	@Test
 	public void addNewPrice() throws IOException {
 		Element bookElement = (Element) root.elements("book").get(0);

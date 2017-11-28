@@ -47,6 +47,7 @@ public class TestBook {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void getNodeAttr() {
 		List<Node> listNode = document.selectNodes("//book[@userName]");
