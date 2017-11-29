@@ -1,0 +1,36 @@
+1.常用服务器
+	收费：weblogic(支持13种j2EE规范)
+	免费： tomcat(支持2种j2EE规范(jsp,servlet)), jboss(支持j2EE规范(EJB))
+
+注意事项：
+	服务器不要放在有中文和带有空格的目录下面
+	
+各协议默认访问端口号：
+	http: 80
+	ftp: 23
+	https: 443
+	pop3: 110
+	smtp: 25
+	
+windows自带的服务如果在进程中不能关闭，就点击电脑，然后在服务选项中，停止服务
+
+EG:
+	http://www.sinlang.com：8080/
+	http://www.sinlang.com:8080/:url
+	.sinlang.com:8080:域名
+	www.sinlang.com: 主机名
+	
+	域下面是可以搭载多台主机：eg:1.搭www的，搭email的....
+	
+Tomcat：
+           目录结构：
+           1. bin 存放启动或者关闭tomcat的脚本文件
+           2. conf 存放tomcat服务器的各种配置文件
+           3. lib 存放tomcat服务器支持的jar包
+           4. logs 存放tomcat的日志文件
+           5. temp 存放tomcat运行时产生的临时文件
+           6. webapps web应用所在目录，即供外界访问的web资源所在位置
+           7. work tomcat的工作目录
+           
+	1.Catalina_nome:环境变量设置的是：startUp时启动的tomcat的存储位置
+	
