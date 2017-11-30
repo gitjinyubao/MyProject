@@ -1,0 +1,84 @@
+Http响应
+	一个http响应代表服务器向客户端回送的数据。它包括一个状态行，若干消息头，以及实体内容
+EG:
+    HTTP/1.1 200 ok
+    Server:Apache-Coyote/1.1
+    Date:Wed, 29 Nov 2017 11:54:18 GMT
+    Content-Length:219
+	Content-Type:text/html
+	Cache-control:private
+							空一行
+	<html>
+	<body>
+	...
+	
+	服务器通过传给特殊的响应头给浏览器来控制浏览器是打开网页，还是下载数据（控制浏览器行为）
+	
+	常见状态码：
+	        100～199   表示成功接收请求，要求客户端继续提交下一次请求才能完成整个处理过程
+	        200～299   表示成功接收请求并已完成整个处理过程，常用200
+	        300～399   为完成请求，客户需进一步细化请求。例如，请求的资源已经移动一个新地址，常用302、307和304
+	                 302：资源已经移动一个新地址;返回一个location，location中包含资源新地址
+	                 307和304：服务器拒绝给予资源，要求客户端浏览器从缓存中获取资源
+	        400～499    客户端的请求有错误（资源不存在），常用404；403：服务器有这个资源，但是你没有访问权限
+	        500～599  服务器端出现错误，常用500
+	        
+	EG:使用302和location实现请求重定向
+	  servlet中：
+	           response.setStatus(302);
+	           response.setHeader("location", "/day04/1.html");
+	  浏览器得到响应获得location消息头之后，又去请求（"/day04/1.html"）获得新的资源
+	  
+	 响应头：（重点部分）
+	     * Location: 这个头配合302可以达到请求重定向
+	     Server: 服务器通过这个头，告诉浏览器服务器的类型
+	     ** Content-Encoding: 服务器通过这个头，数据的压缩格式 
+	     ** Content-Length: 服务器通过这个头，回送数据的长度               数据压缩(重点)
+	     Content-Type: 告诉浏览器以什么样的方式打开文件
+	     content-Disposition: attachment; filename=aaa.zip 下载方式
+	     Last-Modified: 服务器通过这个头告诉浏览器当前资源缓存时间
+	     Refresh: 服务器通过这个头，告诉浏览器多长时间刷新一次（刷新访问一次）
+	     Transfer-Encoding: 服务器通过这个头，告诉浏览器数据的传送格式(chunked: 块传送)
+	     ETag: 缓存相关的头（做到时时更新）缓存头是服务器定义的相关web资源的序列号。
+	                            请求---服务器给予一定序列号的缓存头给浏览器---浏览器再次想获得相同资源---把序列号也发送给服务器
+	           ---服务器检查对应的序列号看看能不能查到---如果查不到就重新给与资源---如果查到了，直接把对应序号的缓存给浏览器
+	           （服务器的某个资源改变了，则相应的资源序列号也会改变的）
+	     Expires: 服务器通过这个头，告诉浏览器把回送的资源缓存多久，-1或0则是不缓存
+	     Cache-Control: no-cache
+	     Pragma: no-cache
+	            服务器通过这两个头让浏览器不要缓存资源
+	            
+	     eg:
+	     
+	     1.服务端数据压缩
+	       	String data="aaaa";
+			ByteArrayOutputStream bout=new ByteArrayOutputStream();
+			GZIPOutputStream gout=new GZIPOutputStream(bout);
+			gout.write(data.getBytes());//包装流一般有缓冲
+			gout.close();//为确保有数据
+			byte gzip[]=bout.toByteArray();//得到压缩后的数据
+			response.setHeader("Content-Encoding", "gzip");
+			response.setHeader("Content-Length", gzip.length+"");
+			
+			response.getOutputStream().write(gzip);
+			
+		 2.显示数据类型（规定浏览器以某种形式打开资源）---》》》可以在tomcat的web.xml中查看各种资源的限定名
+		          图片形式：
+			  	response.setHeader("content-type", "image/bmp");
+				InputStream in=this.getServletContext().getResourceAsStream("/1.bmp");
+				int len=0;
+				byte buffer[]=new byte[1024];
+				OutputStream out=response.getOutputStream();
+				while((len=in.read(buffer))>0){
+					out.write(buffer,0,len);
+				}
+				
+			 下载方式：
+			      response.setHeader("content-disposition", "attachment;filename=3.jpg");
+				  InputStream in=this.getServletContext().getResourceAsStream("/1.bmp");
+				  int len=0;
+				  byte buffer[]=new byte[1024];
+				  OutputStream out=response.getOutputStream();
+				  while((len=in.read(buffer))>0){
+				  	out.write(buffer,0,len);
+				  }
