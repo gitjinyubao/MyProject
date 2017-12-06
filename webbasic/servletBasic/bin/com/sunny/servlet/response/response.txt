@@ -1,0 +1,113 @@
+Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。
+request和response对象即然代表请求和响应，那我们要获取客户机提交过来的数据，只需要找request对象就行了。要向客户机输出数据，只需要找response对象就行了。
+HttpServletResponse对象服务器的响应。这个对象中封装了向客户端发送数据、发送响应头，发送响应状态码的方法。
+
+setHeader(java.lang.String name, java.lang.String value)
+	Sets a response header with the given name and value.
+setStatus(int sc) 
+	Sets the status code for this response.
+getWriter()
+	Returns a PrintWriter object that can send character text to the client.
+getOutputStream()
+	Returns a ServletOutputStream suitable for writing binary data in the response.
+	
+response常见应用
+	向客户端输出中文数据
+	GB2312                             UTF-8
+	
+-|---------|------------------------|--------------|
+ |   IE    |                        |     Servlet  |
+ |---------|------------------------|--------------|
+ 
+ 分别以OutputStream和PrintWriter输出
+ 		String data="中国 ";
+		//程序以什么码表输出，一定要控制浏览器以什么码表打开
+		response.setHeader("Content-type", "text/html;charset=UTF-8");
+		OutputStream out=response.getOutputStream();
+		//out.write(data.getBytes());
+		out.write(data.getBytes("UTF-8"));
+		
+		String data="中国2 ";
+		//html: <meta>标签模拟一个http响应头
+		OutputStream out=response.getOutputStream();
+		//out.write(data.getBytes());
+		out.write("<meta http-equiv='content-type' content='text/html;charset=UTF-8'>".getBytes());
+		out.write(data.getBytes("UTF-8"));
+
+		String data="中国q";
+		//设置response使用的码表，以控制response以什么码表向浏览器输入数据,默认为ISO-8859-1
+		response.setCharacterEncoding("GB2312");
+		//指定浏览器以什么码表打开服务器发送的数据
+		response.setHeader("Content-type", "text/html;charset=GB2312");
+		//response.setHeader("Content-type", "text/html;charset=ISO-8859-1");
+		PrintWriter out=response.getWriter();
+		out.write(data);//
+		String data="中国q";
+		//该句代码等价于其后面两句
+		response.setContentType("text/html;charset=GB2312");
+		//response.setCharacterEncoding("GB2312");
+		//response.setHeader("Content-type", "text/html;charset=ISO-8859-1");
+		PrintWriter out=response.getWriter();
+		out.write(data);//
+		
+文件下载
+	String path=this.getServletContext().getRealPath("/download/new.jpg");
+	//C:\apache-tomcat-7.0.22\webapps\day06\download\new.jsp
+	String filename=path.substring(path.lastIndexOf("\\")+1);
+
+	InputStream in=null;
+	OutputStream out=null;
+	response.setHeader("content-disposition", "attachment;filename="+filename);
+	//如果下载文件是中文文件，则文件名需要经过url编码
+	response.setHeader("content-disposition", "attachment;filename="+URLEncoder.encode(filename,"UTF-8"));
+		
+	try {
+		in=new FileInputStream(path);
+		int len=0;
+		byte buffer[]=new byte[1024];
+		out=response.getOutputStream();
+		while((len=in.read(buffer))>0){
+	out.write(buffer,0,len);
+		}
+	}finally{
+		if(in!=null){
+	try{
+			in.close();
+		}catch(Exception e){
+		e.printStackTrace();
+				}				
+			}
+		}
+		
+发送http头，控制浏览器定时刷新网页(REFRESH)	
+	response.setHeader("refresh", "3");
+	String data = new Random().nextInt(100000)+"";
+	response.getWriter().write(data);
+	response.setHeader("refresh", "3;url='/day06/index.jsp'");
+	response.setContentType("text/html;charset=GB2312");
+	String data = new Random().nextInt(100000)+"";
+	response.getWriter().write("登录成功，将在3秒后跳转，如果没有，请点<a href=''>超链接</a>");
+	String message="<meta http-equiv='refresh' content='3;url=/day06/index.jsp'>登录成功，将在3秒后跳转，如果没有，请点<a href=''>超链接</a>";
+	request.setAttribute("message",message);
+	this.getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
+	
+发送http头，控制浏览器缓存当前文档内容
+	String  data="aaaaa";
+	response.setDateHeader("expires", System.currentTimeMillis()+3600*1000);
+	response.getWriter().write(data); 
+	
+通过response实现请求重定向。
+	response.setStatus(302);// 302状态码和location头即可实现重定向
+	response.setHeader("location", "/day06/index.jsp");	
+	response.sendRedirect("/day06/index.jsp");
+请求重定向指：一个web资源收到客户端请求后，通知客户端去访问另外一个web资源，这称之为请求重定向。
+应用场景：用户注册，让用户知道注册成功，重定向到首页。
+购物网站购完后，转到购物车显示页面，用转发按刷新又买一个，所以用重定向。
+
+response细节
+	getOutputStream和getWriter方法分别用于得到输出二进制数据、输出文本数据的ServletOuputStream、Printwriter对象。
+	getOutputStream和getWriter这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法，包括转发时。  
+	Servlet程序向ServletOutputStream或PrintWriter对象中写入的数据将被Servlet引擎从response里面获取，
+	Servlet引擎将这些数据当作响应消息的正文，然后再与响应状态行和各响应头组合后输出到客户端。 
+Serlvet的service方法结束后，Servlet引擎将检查getWriter或getOutputStream方法返回的输出流对象是否已经调用过close方法，如果没有，Servlet引擎将调用close方法关闭该输出流对象。
+		

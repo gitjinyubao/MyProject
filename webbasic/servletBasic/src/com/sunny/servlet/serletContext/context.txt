@@ -4,12 +4,13 @@ ServletContext对象被包含在ServletConfig对象中，开发人员在编写servlet时，
 可以通过ServletConfig.getServletContext方法获得对ServletContext对象的引用。
 由于一个WEB应用中的所有Servlet共享同一个ServletContext对象，
 因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象。
+    销毁时刻：web服务器停止或者应用程序从服务器中删除
 
 得到servetCntext：
 	1. 方法一：
 	        this.getServletConfig().getServletContext();
 	2. 方法二：
-	        this.getServletContext
+	        this.getServletContext()
 
 应用：
 	1. 多个Servlet通过ServletContext对象实现数据共享。
@@ -136,4 +137,33 @@ ServletContext对象被包含在ServletConfig对象中，开发人员在编写servlet时，
 				System.out.println(dbconfig.get("url"));
 			}
 		}
+		
+		普通类(非servlet)中加载配置文件(不使用ServletContext（可以使用，但是不建议，每层使用相对应的方式）,使用类加载器来加载)：
+		注意：
+		    1. 通过类类加载器读取配置文件的话，这个配置文件不能太大：因为使用它一开始就把类装载到内存里面（太大的话，虚拟java机内存满了，就会导致内存溢出）
+		    2. 使用类装载器装载，文件生命周期内只会被装载一次，你再修改它，类装载器不会再去装载它，所以得到的数据仍然是改变之前的数据
+		    	解决办法：
+		    	                通过普通的流去读取文件资源，不要通过类加载器读取资源
+		    	                String path = UserDao.class.getClassLoader().getResource("db.properties").getPath();
+		    	                // 使用普通流进行加载数据
+		    	                FileInputStream in = new FileInputStream(path);
+		    	                Properties p = new Properties();
+		    	                p.load(in);
+		              
+		比如目录如下
+		src|
+		   |
+		   |-----com.sunny.dao|
+		   |                  |
+		   |                  |----UserDao
+		   |
+		   |------db.propertes
+		   
+		在UesrDao中加载配置文件
+		InputStream in = UserDao.class.getClassLoader().getResourseAsStream("db.properties");
+		Properties p = new Properties();
+		p.load(in);
+		String url = (String) p.getProperty("url");
+		
+		throw new ExceptionInInitializerError(e); // 初始化异常错误 
 				
