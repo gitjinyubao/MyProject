@@ -1,0 +1,44 @@
+HTTP请求：request
+如下所示：
+	GET /books/java.html HTTP/1.1
+	Accept: */*
+	Accept-Language: en-us
+	Connection: Keep-Alive
+	Host: localhost
+	Referer: http://localhost/links.asp
+	User-Agent: Mozilla/4.0
+	Accept-Encoding: gzip, deflate
+
+HTTP请求
+	客户端连上服务器后，向服务器请求某个web资源，称之为客户端向服务器发送了一个HTTP请求。一个完整的HTTP请求包括如下内容：
+一个请求行、若干消息头、以及实体内容，其中的一些消息头和实体内容都是可选的，消息头和实体内容之间要用空行隔开。如下所示：
+GET /books/java.html HTTP/1.1                 12.5HTTP请求
+客户端连上服务器后，向服务器请求某个web资源，称之为客户端向服务器发送了一个HTTP请求。一个完整的HTTP请求包括如下内容：
+	一个请求行、若干消息头、以及实体内容，其中的一些消息头和实体内容都是可选的，消息头和实体内容之间要用空行隔开。如下所示：
+GET /books/java.html HTTP/1.1    请求行(用于描述客户端的请求方式，请求的资源名称，以及使用的HTTP协议版本)
+Accept: */*
+Accept-Language: en-us
+Connection: Keep-Alive
+Host: localhost                           多个消息头（描述客户端请求哪台主机以及客户端的一些环境信息）
+Referer: http://localhost/links.asp
+User-Agent: Mozilla/4.0
+Accept-Encoding: gzip, deflate                      
+                                                                                                                                   一个空行
+
+请求方式：                                                                                                                                 
+	如请求方式为GET方式，则可以在请求的URL地址后以?的形式带上交给服务器的数据，多个数据之间以&进行分隔，例如：
+GET /mail/1.html?name=abc&password=xyz HTTP/1.1
+GET方式的特点：在URL地址后附带的参数是有限制的，其数据容量不能超过1K。
+	如请求方式为POST方式，则可以在请求的实体内容中向服务器发送数据，例如：
+POST /servlet/ParamsServlet HTTP/1.1
+Host:
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 28
+						空一行
+name=abc&password=xyz
+Post方式的特点：传送的数据量无限制。
+
+防盗链：
+     接受请求,后台程序检查请求头的Referer:http://www.sunny.com/，是否为本网站的页面请求，如果不是，就让它跳转到网站首页
+
+

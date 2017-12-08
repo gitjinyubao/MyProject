@@ -1,0 +1,62 @@
+配置虚拟主机
+
+在Tom你cat服务器中可以放置多个网站，所谓配置虚拟主机就是在tomcat服务器中配置一个网站
+如需要在web服务器中配置一个网站，需要使用host元素进行配置
+EG:
+   <Host appBase="F:\news" name="www.sunny.com">
+		<Context docBase="F:\news\student" path="/student" />
+   </Host>
+   
+配置的主机（网站）需要被外部访问，必须在DNS或者windows系统中注册
+DNC注册：购买域名，将域名与主机IP匹配
+windows中注册：配置系统的host(C:\Windows\System32\drivers\etc\host)
+	 localhost name resolution is handled within DNS itself.
+	#	127.0.0.1       localhost
+	#	::1             localhost
+		192.168.254.1   www.sunny.com ---->>>配置项
+		
+tomcat访问端口号改为80
+---->>>>>访问路径：http://www.sunny.com/student/s.html
+
+网站首页配置：
+将访问路径变为：http://www.sunny.com/替换http://www.sunny.com/student/s.html
+1.修改server.xml
+   <Host appBase="F:\news" name="www.sunny.com">
+		<Context docBase="F:\news\student" path="" />
+	</Host>
+	
+2.F:\news\student\WEB-INF\web.xml修改：配置默认页
+  <welcome-file-list>
+    <welcome-file>s.html</welcome-file>
+  </welcome-file-list>
+
+域名访问网站的流程：
+              |——————————————————————————————————————————————————————————————————————————————|
+	          |           第二种方式                                                                                                                                                     |
+	          |          window                                                              |
+	          |            Host(在host中配置)                 解析出对应的主机IP(返回给浏览器)        |
+	          |    www.sunny.com/student/s.html   ------->>>>192.168.254.1(以太网3)            |
+	          |          192.168.254.1                                                       |
+	          |———————————————|——|———————————————————————————————————————————————————————————|
+                              |  |
+                              |  |
+                              |  |
+              |———————————————|——|———————————————————————|               |——————————————————————|                                
+	          |                                          |               |         主机                         | 
+	          |          IE浏览器                                                                |找到对应IP访问          | 网站服务器（student）         | 
+	          |                                          |---------------|                      |  
+	          |   www.sunny.com/student/s.html           |               |                      |   
+	          |                                          |               |                      |   
+	          |——————————————————————————————————————————|               |——|———————————————————|                                  
+	                      | |                                               |
+	                      | |                                               |
+	                      | |                                               |将IP注册给DNS对应域名
+	                      | |                                               |
+	                      | |                                               |
+	          |——————————————————————————————————————————————————————————————————————————————|
+	          |        第一种方式                                                                                                                                                            |
+	          |          DNS                                                                 |
+	          |                                         解析出对应的主机IP(返回给浏览器)            |
+	          |   www.sunny.com/student/s.html   ------------>>>>192.168.254.1(以太网3)        |
+	          |                                                                              |
+	          |——————————————————————————————————————————————————————————————————————————————|

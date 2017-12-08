@@ -1,0 +1,169 @@
+context:
+	WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的ServletContext对象，它代表当前web应用。
+ServletContext对象被包含在ServletConfig对象中，开发人员在编写servlet时，
+可以通过ServletConfig.getServletContext方法获得对ServletContext对象的引用。
+由于一个WEB应用中的所有Servlet共享同一个ServletContext对象，
+因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象。
+    销毁时刻：web服务器停止或者应用程序从服务器中删除
+
+得到servetCntext：
+	1. 方法一：
+	        this.getServletConfig().getServletContext();
+	2. 方法二：
+	        this.getServletContext()
+
+应用：
+	1. 多个Servlet通过ServletContext对象实现数据共享。
+	   public class ServletDemo6 extends HttpServlet {
+		   	//servletContext示例
+			public void doGet(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+				//得到servletContext
+				ServletContext context=this.getServletConfig().getServletContext();
+				ServletContext context2=this.getServletContext();
+				String data="aaaaa";
+				context.setAttribute("data", data);
+			}
+		}
+		
+	    /*
+		 servletContext域：1，是一个容器 2。作用范围是应用程序范围
+		 */
+		public class ServletDemo8 extends HttpServlet {
+		
+		public void doGet(HttpServletRequest request, HttpServletResponse response)
+					throws ServletException, IOException {
+				String value = (String) this.getServletContext().getAttribute("data");
+				response.getOutputStream().write(value.getBytes());
+			}
+		}
+		
+	2. 获取WEB应用的初始化参数。
+		<context-param>
+			<param-name>data</param-name>
+			<param-value>zzzz</param-value>
+		</context-param>
+		
+		this.getServletContext().getAttribute("data");
+		
+	3. 实现Servlet的转发。
+		RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/1.jsp");
+		rd.forward(request, response);
+		
+	4. 利用ServletContext对象读取资源文件。
+	       得到文件路径
+	       读取资源文件的三种方式
+	   .properties文件（属性文件）
+	    url=jdbc:mysql://localhost:3306/test
+		username=root
+		password=root
+		db.properties放在 src目录下,因为该目录下的资源文件发布时会发到/WEB-INF/classes目录下
+
+		InputStreamin=this.getServletContext().getResourceAsStream("/WEB-INF/classes/db.properties");
+		Properties props=new Properties();
+		props.load(in);
+		System.out.println(props.getProperty("url"));
+		//in2的相对路径是tomcat的bin目录，所以这种方法要在该目录下建立文件夹classes，并把文件放在这里
+				File file=new File("");
+				response.getOutputStream().write(file.getAbsolutePath().getBytes());
+		//以上两行代码得到当前路径C:\apache-tomcat-7.0.22\bin
+				FileInputStream in2=new FileInputStream("classes/db.properties");
+				Properties props=new Properties();
+				props.load(in2);
+				//得到绝对路径
+				String path=this.getServletContext().getRealPath("/WEB-INF/classes/db.properties");
+				String filename=path.substring(path.lastIndexOf("\\"));
+				FileInputStream in2=new FileInputStream(path);
+				Properties props=new Properties();
+				props.load(in2);
+				
+		package cn.itcast;
+		
+		import java.io.IOException;
+		import java.io.PrintWriter;
+		
+		import javax.servlet.ServletException;
+		import javax.servlet.http.HttpServlet;
+		import javax.servlet.http.HttpServletRequest;
+		import javax.servlet.http.HttpServletResponse;
+		
+		import cn.itcast.dao.UserDao;
+		
+		//servlet调用其它程序，在其它程序中如何去读取配置文件
+		//通过类装载器
+		public class ServletDemo12 extends HttpServlet {
+			public void doGet(HttpServletRequest request, HttpServletResponse response)
+					throws ServletException, IOException {
+				UserDao user=new UserDao();
+				user.update();
+			}
+		}	package cn.itcast.dao;
+		
+		import java.io.FileInputStream;
+		import java.io.FileNotFoundException;
+		import java.io.IOException;
+		import java.io.InputStream;
+		import java.net.URL;
+		import java.util.Properties;
+		
+		//如果读取资源文件的程序不是servlet的话，
+		//就只能通过类转载器去读了，文件不能太大
+		//用传递参数方法不好，耦合性高
+		public class UserDao {
+		
+			private static Properties dbconfig=new Properties();
+			static {
+				InputStream in=UserDao.class.getClassLoader().getResourceAsStream("db.properties");
+				try {
+					dbconfig.load(in);
+				} catch (IOException e) {
+					throw new ExceptionInInitializerError(e);
+				}	
+				//上面代码类装载器只装载一次,下面代码用类装载方式得到文件位置
+				URL url=UserDao.class.getClassLoader().getResource("db.properties");
+				String str=url.getPath();
+				//file:/C:/apache-tomcat-7.0.22/webapps/day05/WEB-INF/classes/db.properties
+				try {
+					InputStream in2=new FileInputStream(str);
+					try {
+						dbconfig.load(in2);
+					} catch (IOException e) {
+						throw new ExceptionInInitializerError(e);
+					}
+				} catch (FileNotFoundException e1) {
+					throw new ExceptionInInitializerError(e1);
+				}		
+			}
+			public void update() {
+				System.out.println(dbconfig.get("url"));
+			}
+		}
+		
+		普通类(非servlet)中加载配置文件(不使用ServletContext（可以使用，但是不建议，每层使用相对应的方式）,使用类加载器来加载)：
+		注意：
+		    1. 通过类类加载器读取配置文件的话，这个配置文件不能太大：因为使用它一开始就把类装载到内存里面（太大的话，虚拟java机内存满了，就会导致内存溢出）
+		    2. 使用类装载器装载，文件生命周期内只会被装载一次，你再修改它，类装载器不会再去装载它，所以得到的数据仍然是改变之前的数据
+		    	解决办法：
+		    	                通过普通的流去读取文件资源，不要通过类加载器读取资源
+		    	                String path = UserDao.class.getClassLoader().getResource("db.properties").getPath();
+		    	                // 使用普通流进行加载数据
+		    	                FileInputStream in = new FileInputStream(path);
+		    	                Properties p = new Properties();
+		    	                p.load(in);
+		              
+		比如目录如下
+		src|
+		   |
+		   |-----com.sunny.dao|
+		   |                  |
+		   |                  |----UserDao
+		   |
+		   |------db.propertes
+		   
+		在UesrDao中加载配置文件
+		InputStream in = UserDao.class.getClassLoader().getResourseAsStream("db.properties");
+		Properties p = new Properties();
+		p.load(in);
+		String url = (String) p.getProperty("url");
+		
+		throw new ExceptionInInitializerError(e); // 初始化异常错误 
+				

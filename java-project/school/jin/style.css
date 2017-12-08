@@ -1,0 +1,149 @@
+body{
+	 background-image:url("dong28.jpg");
+	 background-repeat:no-repeat;
+	 background-size:cover; 
+	 background-position:botom center; 
+	 overflow:hidden;
+	 } 
+	 
+	 .j1{
+	       box-shadow:0px 0px  20px 1px  rgba(191,59,96,0.57);      
+	 }
+	  .j1:hover{
+	          font-size:1.3em;	
+	           background-size:100%;           
+	 }
+	 .gong{ height:100%;}	
+	
+	 .a{
+	         display:inline-block;
+	         height:60px;
+	         width:208px;
+	         text-align:center;
+	         font-style:italic;
+	         font-size:32px;
+	         box-shadow:  0px 0px 10px  hsla(0,0%,3%,1.00);         
+	 }
+	 a:hover{
+	        background:hsla(160,52%,49%,0.81);
+	        color:white;
+	        box-shadow:inset 1px 1px 2px hsla(0,0%,3%,1.00);
+	        transition:box-shadow 1s,background 1s;  
+	 }
+	 .mainbody
+{
+     height:220px;
+     width:850px;   
+     margin:5px;
+     border:solid 1px  black;
+}
+#one
+{
+      width:850px;  
+      margin:5px;
+     border:solid 1px  black;
+}	
+     .mainbody1
+{
+     height:85%;
+     width:94%; 
+     margin-left:30px;
+     border:solid 1px  black;
+}
+ table{background-image:url("Images/dong28.jpg");
+	  background-repeat:no-repeat;
+	 background-size:cover; }
+	 
+	 
+	 .body2{
+	 background-image:url("Images/bei5.jpg");
+	 background-repeat:no-repeat;
+	 background-size:1500px  50px; 
+	 background-position:botom center; 
+	 }
+	 
+	 
+	 
+	 /*=========lie.jsp========*/
+.j{
+      display:inline-block;
+      box-shadow: inset 0px 0px 15px hsla(0,0%,3%,1.00);
+      text-align:center;
+      width:132px;
+      background:none;
+      font-weight:bold;
+      color:rgba(25,195,102,1.00);
+      padding-top:1px;    
+}
+.j:hover{
+       background:rgba(43,201,184,0.19)  ;  
+        color:black;
+        box-shadow:1px 1px 3px  #000;
+        transition:box-shadow 1s , background 1s;
+}
+.lie{height:100%;}	
+
+
+ /*=========lie2.jsp========*/
+ .j2{
+      display:inline-block;
+      box-shadow: inset 0px 0px 15px hsla(160,52%,49%,0.9);
+      text-align:center;
+      width:142px;
+      background:none;
+  
+      font-weight:bold;
+      color:hsla(108,76%,28%,1.00);
+      padding-top:1px;  
+     
+}
+.j2:hover{
+       background:rgba(43,201,184,0.19)  ;  
+        color:black;
+        box-shadow:1px 1px 3px  #000;
+        transition:box-shadow 1s , background 1s;
+}
+.p1{
+	  margin-left:40px;
+	  box-shadow: inset 0px 0px 15px hsla(160,52%,49%,0.3);
+      text-align:center;
+      width:132px;
+     
+      background:none;
+     
+      text-align:center;
+	 }
+	 .d{height:100%;} 
+	 
+	 
+	 
+	 /*=========lie3.jsp========*/
+	.j3:hover{
+       background:rgba(43,201,184,0.19)  ;  
+        color:black;
+        box-shadow:1px 1px 3px  #000;
+        transition:box-shadow 1s , background 1s;
+        
+}
+.j3{
+      display:inline-block;
+      box-shadow: inset 0px 0px 15px hsla(0,0%,3%,1.00);
+      text-align:center;
+      width:132px;
+      background:none;
+    
+      font-weight:bold;
+      color:rgba(185,79,50,0.80); 
+      padding-top:1px;  
+      
+}
+.p3{margin-left:40px;
+	  box-shadow: inset 0px 0px 15px rgba(185,79,50,0.80);
+      text-align:center;
+      width:132px;
+       
+      background:none;
+      text-align:center;
+    
+      color:rgba(185,79,50,0.80)}
+      .d2{height:100%;}

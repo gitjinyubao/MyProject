@@ -1,0 +1,33 @@
+(应用程序和虚拟目录的映射)Mapping of applications and virtual directories
+1. 虚拟目录映射
+	web应用程序开发好后，若想供外界访问，
+需要把web应用所在的目录交给web服务器管理，
+这个过程称之为虚拟目录映射
+	操作：
+	手动映射：
+		方式1：
+			在server.xml中配置<Context path="/sunny" docBase="c:\news"></Context>
+			<Context>: 代表一个web应用
+			docBase: 资源的位置
+			path: web应用的对外访问路径
+			配置缺省访问：path=""
+			总结: 将c:\news的路径映射成/sunny的访问路径供外界访问
+			这个方式的缺点：需要重启tomcat
+			
+		方式2：
+		    在Tomcat 8.0\conf\Catalina\localhost目录下新建一个xml文件，
+		    前缀名即为上文提到的访问路径(path),此种情况不需要在<Context>中加入path属性
+		    多级访问路径：a#b#c.xml  表示path为 /a/b/c
+		    配置缺省访问：命名为Root.xml(此种情况需要重启服务器)
+	             优点：不用重新启动tomcat
+	
+	tomcat自动映射：
+		操作：将web资源直接丢到webapps目录下面，将会完成自动映射。path即为web资源文件的名称(path="/news")
+		
+		最强省略：
+		   1.path=""
+		   2. <welcome-file-list>
+              <welcome-file>index.html</welcome-file>
+  			  </welcome-file-list>
+  		   3.tomcat端口号设置为80
+  		   访问首页变为：http://localhost   --->>>进入主页（index.html）

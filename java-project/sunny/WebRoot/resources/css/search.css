@@ -1,0 +1,19 @@
+#body{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	margin-left: -200px;
+	margin-top: -50px;
+}
+.mouseOver{
+	background: #708090;
+	color: #FFFAFF
+}
+.mouseOut{
+	background: #FFFAFF;
+	color:  #000000;
+}
+body
+{
+	font:MicroSoft YaHei;
+}

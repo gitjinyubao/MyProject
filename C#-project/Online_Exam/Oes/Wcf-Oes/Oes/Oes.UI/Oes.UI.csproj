@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19EA8F63-FA64-4EB6-94DA-C23F655A3E94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oes.Entity</RootNamespace>
+    <AssemblyName>Oes.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constans.cs" />
+    <Compile Include="Custom\ExamPassInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\ExamPassInformation.Designer.cs">
+      <DependentUpon>ExamPassInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\ExamTabPageTitleHead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\ExamTabPageTitleHead.Designer.cs">
+      <DependentUpon>ExamTabPageTitleHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\ExamTabPageTitleBottom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\ExamTabPageTitleBottom.Designer.cs">
+      <DependentUpon>ExamTabPageTitleBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\ExamDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\ExamDetail.Designer.cs">
+      <DependentUpon>ExamDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\KindAbout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\KindAbout.Designer.cs">
+      <DependentUpon>KindAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\NoticeIterm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\NoticeIterm.Designer.cs">
+      <DependentUpon>NoticeIterm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\PageNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\PageNumber.Designer.cs">
+      <DependentUpon>PageNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\QuestionsDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\QuestionsDetail.Designer.cs">
+      <DependentUpon>QuestionsDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\SelectKindExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\SelectKindExam.Designer.cs">
+      <DependentUpon>SelectKindExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoExamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoExamForm.Designer.cs">
+      <DependentUpon>DoExamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamDescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamDescriptionForm.Designer.cs">
+      <DependentUpon>ExamDescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamDetailForm.Designer.cs">
+      <DependentUpon>ExamDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamScoreForm.Designer.cs">
+      <DependentUpon>ExamScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSession.cs" />
+    <Compile Include="util\ExitCurrentUser.cs" />
+    <Compile Include="util\SetLanguage.cs" />
+    <Compile Include="util\CalculateFinishTime.cs" />
+    <Compile Include="util\DurationTimeToHourMinitesSecond.cs" />
+    <Compile Include="util\IsNumber.cs" />
+    <Compile Include="util\TimeSpanToString.cs" />
+    <EmbeddedResource Include="Custom\ExamPassInformation.resx">
+      <DependentUpon>ExamPassInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\ExamTabPageTitleBottom.resx">
+      <DependentUpon>ExamTabPageTitleBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\ExamTabPageTitleHead.resx">
+      <DependentUpon>ExamTabPageTitleHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\ExamDetail.resx">
+      <DependentUpon>ExamDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\KindAbout.resx">
+      <DependentUpon>KindAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\NoticeIterm.resx">
+      <DependentUpon>NoticeIterm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\PageNumber.resx">
+      <DependentUpon>PageNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\QuestionsDetail.resx">
+      <DependentUpon>QuestionsDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\SelectKindExam.resx">
+      <DependentUpon>SelectKindExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoExamForm.resx">
+      <DependentUpon>DoExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamDescriptionForm.resx">
+      <DependentUpon>ExamDescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamDescriptionForm.zh-Hans.resx">
+      <DependentUpon>ExamDescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamDetailForm.resx">
+      <DependentUpon>ExamDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamDetailForm.zh-Hans.resx">
+      <DependentUpon>ExamDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamScoreForm.resx">
+      <DependentUpon>ExamScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamScoreForm.zh-Hans.resx">
+      <DependentUpon>ExamScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hans.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.zh-Hans.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblDscName.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblAscEffectiveTime.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblAscExamTotalScore.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblDscId.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblAscId.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblAscOperation.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LblAscPassCriteria.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICN_Increase_10x15.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICN_Decrese_10x15.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICN_Right_15x15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICN_Wrong_15x15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Wcf\Wcf\Contracts.csproj">
+      <Project>{EB95CD96-E847-460D-A764-5158B4DAD610}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICN_Search_15x20.png.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

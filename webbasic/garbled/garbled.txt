@@ -1,0 +1,51 @@
+请求参数的中文乱码问题
+	浏览器以什么编码向服务器提交数据，在查看/编码下可看到，是你在做网页时指定的。
+	
+	//解决POST乱码
+	request.setCharacterEncoding("UTF-8");
+	String username=request.getParameter("username");
+	System.out.println(username);	// 解决Get方式提交的乱码
+	String username2=request.getParameter("username2");
+	username2=new String(username2.getBytes("iso-8859-1"),"UTF-8");
+	System.out.println(username2);
+	
+	/*
+	The HTTP Connector 
+	URIEncoding  This specifies the character encoding used to decode the URI bytes, 
+	after %xx decoding the URL. If not specified, ISO-8859-1 will be used。
+	<Connector port="8080" protocol="HTTP/1.1" 
+	               connectionTimeout="20000" 
+	               redirectPort="8443" URIEncoding="UTF-8" />
+	useBodyEncodingForURI
+	This specifies if the encoding specified in contentType should be used for URI query parameters,
+	instead of using the URIEncoding. This setting is present for compatibility with Tomcat 4.1.x, 
+	where the encoding specified in the contentType, or explicitly set using Request.
+	setCharacterEncoding method was also used for the parameters from the URL.
+	The default value is false.
+	<Connector port="8080" protocol="HTTP/1.1" 
+	               connectionTimeout="20000" 
+	               redirectPort="8443" useBodyEncodingForURI
+	="true" />
+	*/
+	
+	// 解决Get方式提交的乱码
+	String username2=request.getParameter("username2");
+	username2=new String(username2.getBytes("iso-8859-1"),"UTF-8");
+	System.out.println(username2);
+	/*
+	    <Connector port="8080" protocol="HTTP/1.1" 
+	               connectionTimeout="20000" 
+	               redirectPort="8443" URIEncoding="UTF-8" />
+	<Connector port="8080" protocol="HTTP/1.1" 
+	               connectionTimeout="20000" 
+	               redirectPort="8443" useBodyEncodingForURI
+	="true" />
+	*/
+	
+	//无乱码	
+		request.setCharacterEncoding("UTF-8");
+	String username=request.getParameter("username");
+	response.setCharacterEncoding("gb2312");
+	response.setContentType("text/htm;charset=gb2312");
+	response.getWriter().write(username);
+		
