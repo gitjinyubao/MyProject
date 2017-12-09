@@ -1,0 +1,11 @@
+package bianli;
+
+import java.io.File;
+
+public class Demo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LX1.bl(new File("D:\\jinyubao\\jinyu\\bao","jin"));
+	}
+}

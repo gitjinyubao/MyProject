@@ -1,0 +1,39 @@
+package Accessible_IO;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class lianxi2 {
+
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		File f1=new File("D:\\金玉波\\jin\\yu\\bao");
+		if(!f1.exists())
+		{
+			f1.mkdirs();
+		}
+		File f2=new File("D:\\金玉波\\jin\\yu\\bao","beibei.txt");
+		if(!f2.exists())
+		{
+			f2.createNewFile();
+		}
+		//注意文件类型的格式不能进行读写，必须是txt或者dat格式的
+		/**
+		 * 通过RandomAccessFile获取读写的权限
+		 */
+		RandomAccessFile raf=new RandomAccessFile(f2,"rw");
+		/**
+		 * 写入
+		 */
+		raf.seek(0);
+		raf.write('A');
+		raf.write('B');
+		
+		
+		f1.deleteOnExit();
+
+
+	}
+
+}

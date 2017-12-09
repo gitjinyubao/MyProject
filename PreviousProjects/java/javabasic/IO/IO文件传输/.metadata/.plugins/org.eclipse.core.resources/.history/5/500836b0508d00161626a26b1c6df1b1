@@ -1,0 +1,25 @@
+package io;
+
+public class Lianxi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/**
+		 * 文件的编码
+		 */
+		String q="木渴望ABC";
+		int w=10;
+		double e=21.22;
+		/**
+		 * 将String基本类型转化为字节类型
+		 */
+		byte [] q1=q.getBytes();
+		for(byte q2:q1)
+		{
+			System.out.println(q2);
+			System.out.println(Double.toHexString(q2));
+		}
+
+	}
+
+}

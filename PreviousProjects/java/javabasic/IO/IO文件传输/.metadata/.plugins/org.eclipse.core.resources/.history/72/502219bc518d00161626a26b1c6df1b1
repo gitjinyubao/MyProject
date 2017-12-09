@@ -1,0 +1,43 @@
+package io;
+
+import java.io.IOError;
+import java.io.IOException;
+
+public class Lianxi {
+/**
+ * 计算机中硬盘的存储是以字节（byte）的形式存储的
+ * @param args
+ */
+	public static void main(String[] args)throws IOException {
+		// TODO Auto-generated method stub
+		/**
+		 * 文件的编码
+		 */
+		String q="木渴望ABC";
+		//int w=10;
+		//double e=21.22;数字类型的不必进行转化（字节在计算机中是以数字的形式表示出来的），文字类型在编辑器中对格式的要求较大
+		/**
+		 * 将String基本类型转化为字节类型
+		 */
+		byte [] q1=q.getBytes();
+		for(byte q2:q1)
+		{
+			System.out.println(q2);//字节在计算机中是以数字的形式表示出来的
+			System.out.println(Double.toHexString(q2));
+		}
+		
+	    //指定保存的字节格式
+		byte [] q3=q.getBytes("utf-16be");	
+        for(byte q4:q3)
+        {
+        	System.out.println(Integer.toBinaryString(q4));
+        }
+        /**
+         * 将其他格式换个格式再以基本类型输出
+         */
+        String q5=new String(q3,"GBK");
+        System.out.println(q5);
+        
+	}
+
+}

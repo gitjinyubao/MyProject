@@ -1,0 +1,42 @@
+package io;
+
+public class Ioceshi {
+
+	
+
+	public static void main(String[] args)throws Exception {
+		
+		// TODO Auto-generated method stub
+		String a="金玉宝ABC";
+		byte[] b=a.getBytes();
+		for(byte c:b)
+		{
+			System.out.println(Integer.toHexString(c& 0xff));
+		}
+		System.out.println("utf-8——————————————————");
+		byte[] e=a.getBytes("utf-8");
+		for(byte c:e)
+		{
+			System.out.println(Integer.toHexString(c& 0xff));
+		}
+		System.out.println("utf-16be——————————————————");
+		byte[] r=a.getBytes("utf-16be");
+		for(byte c:r)
+		{
+			System.out.println(Integer.toHexString(c& 0xff));
+		}
+		/**
+		 * 文本文件就是字节序列
+		 * 可以是任意文本的字节序列
+		 * 如果我们在中文机器上直接创建文本文件，那么该文本文件只认识ANSI文件
+		 * 联通，联正巧合的符合了utf-8这种编码规则
+		 */
+		String i=new String(r);//r为utf-16的编码
+		System.out.println(i);//出现乱码
+		String o=new String(r,"utf-8");//r为utf-16的编码
+		System.out.println(o);//出现乱码
+		String p=new String(r,"utf-16");//r为utf-16的编码
+		System.out.println(p);//正常
+	}
+
+}

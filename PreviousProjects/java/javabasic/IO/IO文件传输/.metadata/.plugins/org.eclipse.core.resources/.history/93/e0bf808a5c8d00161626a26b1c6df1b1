@@ -1,0 +1,14 @@
+package bianli;
+
+import java.io.File;
+
+
+public class Demo1 {
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		Lianxi.Bianli1(new File("D:\\javaÆðº½"));
+
+	}
+
+}

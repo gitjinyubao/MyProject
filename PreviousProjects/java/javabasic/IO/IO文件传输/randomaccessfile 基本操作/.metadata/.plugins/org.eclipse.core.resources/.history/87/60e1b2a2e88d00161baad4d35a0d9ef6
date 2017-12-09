@@ -1,0 +1,40 @@
+package Accessible_IO;
+
+import java.io.File;
+
+public class Lianxi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1=new File("D:\\jinyubao\\bao","玉宝");
+		if(!f1.exists())
+		{
+			System.out.println("目录"+f1+"不存在");
+			f1.mkdirs();
+			System.out.println(f1.listFiles());
+		}
+		File f2=new File("D:\\jinyubao\\bao","金");
+		f1.renameTo(f2);//如果盘符、目录不对就变成了剪切
+		//获取信息
+		System.out.println(f2.getName());
+		System.out.println(f2.getPath());
+		System.out.println(f2.canExecute());
+		System.out.println(f2.getAbsolutePath());
+		System.out.println(f2.getParent());
+		System.out.println(f2.length());
+		//获取盘符
+		File[] f3=f2.listRoots();
+		for(File f4:f3)
+		{
+			System.out.println(f4);
+		}
+		//获取File目录下所有文件
+		File f5=new File("D:\\bao");
+		String [] s1=f5.list();
+		for(String s2:s1)
+		{
+			System.out.println(s2);
+		}//只是得到下一层的所有子目录
+	}
+	
+}

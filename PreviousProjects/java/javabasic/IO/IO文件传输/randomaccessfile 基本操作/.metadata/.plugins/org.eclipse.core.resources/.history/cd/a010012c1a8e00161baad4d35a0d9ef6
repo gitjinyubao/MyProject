@@ -1,0 +1,12 @@
+package zijie;
+
+import java.io.FileInputStream;
+
+public class lianxi {
+	public static void print(String filename)
+	{
+		FileInputStream f1=new FileInputStream(filename);
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package zijie;
+
+import java.io.IOException;
+
+public class Demo {
+
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		Liu.prHexint("D:\\½ðÓñ²¨\\jin\\yu\\bao");
+	}
+
+}

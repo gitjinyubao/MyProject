@@ -1,0 +1,13 @@
+package File_;
+
+import java.io.File;
+
+public class File_lei {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File file=new File("D:\\javaÆðº½");
+        System.out.println(file.exists());
+	}
+
+}

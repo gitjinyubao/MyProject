@@ -1,0 +1,28 @@
+package Accessible_IO;
+
+import java.io.File;
+import java.io.IOException;
+
+public class jin {
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+   		File f1=new File("demo");
+   	    if(!f1.exists())
+   	    	System.out.println("不存在"+f1+"目录");
+   	    	f1.mkdir();
+   	    	File f2=new File("demo","jin.txt");
+   	    if(!f2.exists())
+   	    {
+   	    	System.out.println(f1+"不是目录");
+   	    	f2.mkdir();
+   	    }
+   	   	
+   	   	
+
+	}
+
+	
+		
+	}
+
+

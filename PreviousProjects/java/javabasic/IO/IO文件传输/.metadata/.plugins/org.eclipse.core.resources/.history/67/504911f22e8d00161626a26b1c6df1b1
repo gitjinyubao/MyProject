@@ -1,0 +1,40 @@
+package bianli;
+
+import java.io.File;
+
+public class Bianli {
+	public static void bianli(File a) {
+		// TODO Auto-generated method stub
+       if(!a.exists())
+       {
+    	   System.out.println("目录："+a+"不存在");
+       }
+       if(!a.isDirectory())
+       {
+    	   System.out.println(a+"不是目录");
+       }
+       String[] e=a.list();
+//       for(String i:e)
+//       {
+//    	   System.out.println(a+i);
+//       }
+//       File[] d=a.listFiles();
+//       if(d!=null&&d.length>0)
+//       {
+//    	   for(File s:d)
+//    	   {
+//    		   if(s.isDirectory())
+//    		   {
+//    			  listDirectory(s);
+//    		   }
+//    		   else
+//    		   {
+//    			   System.out.println(s);
+//    		   }
+//    	   }
+//       }
+//	}
+//	public static void listDirectory(File s) {
+//		// TODO Auto-generated method stub	
+}
+}

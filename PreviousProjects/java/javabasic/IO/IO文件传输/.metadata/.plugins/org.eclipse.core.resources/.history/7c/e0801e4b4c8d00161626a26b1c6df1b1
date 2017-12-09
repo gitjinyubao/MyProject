@@ -1,0 +1,21 @@
+package io;
+
+public class Lianxi {
+       
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//文件编码的认识
+		String s="慕课网abc";
+		//将String基本类型转化为字节型
+		byte [] a=s.getBytes();
+		//将字节转化为int基本类型输出
+		for(byte c:a)
+		{
+		    System.out.println(Integer.toHexString(c));
+		}
+		
+
+	}
+
+}

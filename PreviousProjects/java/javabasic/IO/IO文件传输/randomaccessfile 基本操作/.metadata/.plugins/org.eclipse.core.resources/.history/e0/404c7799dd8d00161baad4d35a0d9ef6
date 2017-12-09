@@ -1,0 +1,19 @@
+package Accessible_IO;
+
+import java.io.File;
+
+public class jin {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   		File f1=new File("D:\\javaÆðº½");
+   	   
+   	   	
+   	   	
+
+	}
+
+	
+		
+	}
+
+

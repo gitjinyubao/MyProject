@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+D:\java起航\IO文件传输\.metadata\.plugins\org.eclipse.jdt.core
+1520613992.index
+489589585.index
+3780202350.index
+1385745942.index

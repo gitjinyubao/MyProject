@@ -1,0 +1,19 @@
+package Accessible_IO;
+
+import java.io.File;
+
+public class Lianxi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1=new File("D:\\jinyubao\\bao","Óñ±¦");
+		if(!f1.exists())
+		{
+			System.out.println("Ä¿Â¼"+f1+"²»´æÔÚ");
+			f1.mkdirs();
+			f1.listFiles();
+		}
+
+	}
+
+}

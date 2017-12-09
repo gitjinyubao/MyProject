@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<bookstore>
+          <book id="1">
+                      <name>毛泽东</name>
+                      <year>2014</year>
+                      <price>99</price>
+          </book>
+          <book id="2">
+                      <name>计算机</name>
+                      <year>2014</year>
+          </book>
+</bookstore>

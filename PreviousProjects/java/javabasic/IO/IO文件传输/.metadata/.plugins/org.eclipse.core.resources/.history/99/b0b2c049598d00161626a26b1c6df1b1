@@ -1,0 +1,20 @@
+package bianli;
+
+import java.io.File;
+
+public class LX1 {
+
+	public static void bl(File f) {
+		// TODO Auto-generated method stub
+		if(!f.exists())
+		{
+			System.out.println("目录"+f+"不存在");
+		}
+		if(!f.isDirectory())
+		{
+			System.out.println(f+"不是目录");
+		}
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package zijie;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class lianxi {
+	public static void print (String filename) throws IOException
+	{
+		FileInputStream f1=new FileInputStream(filename);
+		int b;
+		int i=0;
+		while((b=f1.read())!=-1)
+		{
+			if(b<=0xf)
+			{
+				System.out.print("0");
+			}
+			System.out.print(Integer.toHexString(b)+"  ");
+			if((i++)%10==0)
+			{
+				System.out.println();
+			}
+		}
+		f1.close();
+	}
+}
+

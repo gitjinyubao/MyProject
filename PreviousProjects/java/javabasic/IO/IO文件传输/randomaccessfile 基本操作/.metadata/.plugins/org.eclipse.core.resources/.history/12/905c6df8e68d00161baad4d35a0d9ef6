@@ -1,0 +1,20 @@
+package Accessible_IO;
+
+import java.io.File;
+
+public class Lianxi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1=new File("D:\\jinyubao\\bao","玉宝");
+		if(!f1.exists())
+		{
+			System.out.println("目录"+f1+"不存在");
+			f1.mkdirs();
+			System.out.println(f1.listFiles());
+			File f2=new File("D:\\jinyubao\\bao","金");
+			f1.renameTo(f2);
+		}
+	}
+	
+}

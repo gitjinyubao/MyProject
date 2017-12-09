@@ -1,0 +1,17 @@
+package io;
+
+public class IO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="½ðÓñ±¦";
+		byte []b=a.getBytes();
+		for(byte c:b)
+		{
+			System.out.println(Integer.toHexString(c)+" ");
+		}
+		
+
+	}
+
+}

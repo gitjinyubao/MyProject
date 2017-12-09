@@ -1,0 +1,21 @@
+package File_;
+import java.io.File;
+
+public class File_lei {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		File file=new File("D:"+File.separator);
+		//判断此文件是否存在于D盘中
+        System.out.println(file.exists());
+        if(!file.exists())//如果不存在这样的文件.......创建一个文件
+        {
+        	file.mkdirs();
+        }
+        else
+        {
+        	file.delete();//否则删除
+        }
+	}
+}
