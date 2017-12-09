@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.div {
+	font-size: x-large;
+	font-style: italic;
+	line-height: 2em;
+	font-weight: 100;
+	color: #0C0;
+}
+.div {
+	background-attachment: scroll;
+	background-color: #0FC;
+	background-image: url(1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+</style>
+<script>
+<!--
+     function   onTest()
+	 {
+		 //此种方式需要通过name来获得元素，而不是ID值
+		 var  email=document.j.email.value;
+		 var  number=document.j.number.value;
+		  //email格式校验
+		 if(email.length!=0)
+		 {  
+		    if(email.charAt(0)=='@'||email.charAt(0)=='.'||email.charAt(email.length-1)=='@'||email.charAt(email.length-1)=='.'||email.indexOf('.',0)==-1||email.indexOf('@',0)==-1)
+			{
+				alert("邮箱格式不对");
+				document.j.email.focus();
+				return  false;
+			}
+		 }
+		 else
+		 {
+			 document.j.email.focus();
+			 alert("邮箱格式不对");
+			 return false;
+		 }
+		 
+		 //电话格式校验
+		 if(number.length!=0&&number.length==11)
+		 {
+			 var testNumber='012345678';
+			 for(var i=0;i<number.length;++i)
+			 {
+				 var  indexNumber=number.charAt(i);
+				 if(testNumber.indexOf(indexNumber,0)==-1)
+				 {
+					   alert("电话格式错误"); 
+					   document.j.number.focus();
+					   return  false;
+				 }
+					 
+			 }
+		 }
+		 else
+		 {
+			 alert("电话格式错误");
+			 document.j.number.focus();
+			 return false;
+		 } 
+	 }
+//-->
+</script>
+
+</head>
+
+<body>
+<!--onSubmit要确定是大写的S-->
+<form  name="j"    action=""   onSubmit="return onTest();">
+<div>
+     <h2>信息登记</h2>
+     <br /><br />
+     <div>
+     email地址：<input   type="email"  name="email" required="required"/>
+     </div><br />
+     <div>
+     电话号码：<input     type="text"   name="number"   required="required"  placeholder="13971501571"/>
+     </div><br />
+     <div>
+     <input   type="reset"            value="重置"      />
+     <input   type="submit"           value="确定"  />  
+     </div> 
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{208D5200-E4E0-4CF1-919E-C8122D7F20F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shuZu", "shuZu\shuZu.csproj", "{89FF3F98-6BF3-4BBF-AA5F-8877E960C8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kind", "kind\kind.csproj", "{57E1F585-BCC9-404E-9740-059D4747A7AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractkind", "Abstractkind\Abstractkind.csproj", "{274A1C37-427D-4510-AAED-A2BDDD538271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sealedkind", "sealedkind\sealedkind.csproj", "{1B2B3ADF-DABB-40D1-BE0F-6BC06FB7D537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceKind", "InterfaceKind\InterfaceKind.csproj", "{2A0DE2F6-239A-4A75-8334-CB9A7D5EABA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entrust", "Entrust\Entrust.csproj", "{79ACB401-4A66-43A7-BFD9-C4C5F1D15C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Things", "Things\Things.csproj", "{D88B34CF-BF7E-4D3D-B23C-1C2BAC06AECC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{208D5200-E4E0-4CF1-919E-C8122D7F20F9}.Debug|x86.ActiveCfg = Debug|x86
+		{208D5200-E4E0-4CF1-919E-C8122D7F20F9}.Debug|x86.Build.0 = Debug|x86
+		{208D5200-E4E0-4CF1-919E-C8122D7F20F9}.Release|x86.ActiveCfg = Release|x86
+		{208D5200-E4E0-4CF1-919E-C8122D7F20F9}.Release|x86.Build.0 = Release|x86
+		{89FF3F98-6BF3-4BBF-AA5F-8877E960C8A6}.Debug|x86.ActiveCfg = Debug|x86
+		{89FF3F98-6BF3-4BBF-AA5F-8877E960C8A6}.Debug|x86.Build.0 = Debug|x86
+		{89FF3F98-6BF3-4BBF-AA5F-8877E960C8A6}.Release|x86.ActiveCfg = Release|x86
+		{89FF3F98-6BF3-4BBF-AA5F-8877E960C8A6}.Release|x86.Build.0 = Release|x86
+		{57E1F585-BCC9-404E-9740-059D4747A7AF}.Debug|x86.ActiveCfg = Debug|x86
+		{57E1F585-BCC9-404E-9740-059D4747A7AF}.Debug|x86.Build.0 = Debug|x86
+		{57E1F585-BCC9-404E-9740-059D4747A7AF}.Release|x86.ActiveCfg = Release|x86
+		{57E1F585-BCC9-404E-9740-059D4747A7AF}.Release|x86.Build.0 = Release|x86
+		{274A1C37-427D-4510-AAED-A2BDDD538271}.Debug|x86.ActiveCfg = Debug|x86
+		{274A1C37-427D-4510-AAED-A2BDDD538271}.Debug|x86.Build.0 = Debug|x86
+		{274A1C37-427D-4510-AAED-A2BDDD538271}.Release|x86.ActiveCfg = Release|x86
+		{274A1C37-427D-4510-AAED-A2BDDD538271}.Release|x86.Build.0 = Release|x86
+		{1B2B3ADF-DABB-40D1-BE0F-6BC06FB7D537}.Debug|x86.ActiveCfg = Debug|x86
+		{1B2B3ADF-DABB-40D1-BE0F-6BC06FB7D537}.Debug|x86.Build.0 = Debug|x86
+		{1B2B3ADF-DABB-40D1-BE0F-6BC06FB7D537}.Release|x86.ActiveCfg = Release|x86
+		{1B2B3ADF-DABB-40D1-BE0F-6BC06FB7D537}.Release|x86.Build.0 = Release|x86
+		{2A0DE2F6-239A-4A75-8334-CB9A7D5EABA3}.Debug|x86.ActiveCfg = Debug|x86
+		{2A0DE2F6-239A-4A75-8334-CB9A7D5EABA3}.Debug|x86.Build.0 = Debug|x86
+		{2A0DE2F6-239A-4A75-8334-CB9A7D5EABA3}.Release|x86.ActiveCfg = Release|x86
+		{2A0DE2F6-239A-4A75-8334-CB9A7D5EABA3}.Release|x86.Build.0 = Release|x86
+		{79ACB401-4A66-43A7-BFD9-C4C5F1D15C3A}.Debug|x86.ActiveCfg = Debug|x86
+		{79ACB401-4A66-43A7-BFD9-C4C5F1D15C3A}.Debug|x86.Build.0 = Debug|x86
+		{79ACB401-4A66-43A7-BFD9-C4C5F1D15C3A}.Release|x86.ActiveCfg = Release|x86
+		{79ACB401-4A66-43A7-BFD9-C4C5F1D15C3A}.Release|x86.Build.0 = Release|x86
+		{D88B34CF-BF7E-4D3D-B23C-1C2BAC06AECC}.Debug|x86.ActiveCfg = Debug|x86
+		{D88B34CF-BF7E-4D3D-B23C-1C2BAC06AECC}.Debug|x86.Build.0 = Debug|x86
+		{D88B34CF-BF7E-4D3D-B23C-1C2BAC06AECC}.Release|x86.ActiveCfg = Release|x86
+		{D88B34CF-BF7E-4D3D-B23C-1C2BAC06AECC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

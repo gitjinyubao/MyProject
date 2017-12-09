@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#j
+{
+	background:#3CF;
+	width:100px;
+	height:400px;
+	position:absolute;
+	left:190px;
+	top:100px;
+	}
+</style>
+<script>
+<!--
+function   change(left,top)
+{
+	var   a=document.getElementById('j');
+	a.style.left=left;
+	a.style.top=top;
+}
+//处理浏览器兼容问题
+function   check()
+{
+	if(document.layers !=null)
+	{
+		location.href="7-8.html";
+	}
+	else
+	{
+		location.href="7-7.html";
+	}
+}
+//-->
+</script>
+</head>
+
+<body>
+<input   type="button"   value="200"   onclick="change('200px','200px')" />
+<input   type="button"   value="400"   onclick="change('400px','400px');" />
+<input   type="button"   value="600"	az   onclick="change('600px','600px');" />
+<input   type="button"   value="800"   onclick="change('800px','800px');" />
+<div id="j"><!--一定要加上px-->
+mmmmm
+</div>
+</body>
+</html>

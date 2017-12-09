@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function   click1()
+{
+	var  i=document.getElementById('j').src;
+	var i1=i.substr(0,i.length-5);
+	var i2=i.substr(i.length-5,1);
+	var i3=i2-1+2;
+	var src=i1+"i3"+".jpg";
+	document.getElementById('j').src=src;
+	alert(i);	
+}
+</script>
+</head>
+
+<body>
+<img id="j" src="images/1.jpg"  width="270"  height="300"  onclick="click1();"/>
+</body>
+</html>

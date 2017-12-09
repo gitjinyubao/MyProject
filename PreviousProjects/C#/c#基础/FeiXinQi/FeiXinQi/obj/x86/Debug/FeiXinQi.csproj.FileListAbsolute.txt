@@ -1,0 +1,5 @@
+E:\c#\c#基础\FeiXinQi\FeiXinQi\bin\Debug\FeiXinQi.exe
+E:\c#\c#基础\FeiXinQi\FeiXinQi\bin\Debug\FeiXinQi.pdb
+E:\c#\c#基础\FeiXinQi\FeiXinQi\obj\x86\Debug\FeiXinQi.exe
+E:\c#\c#基础\FeiXinQi\FeiXinQi\obj\x86\Debug\FeiXinQi.pdb
+E:\c#\c#基础\FeiXinQi\FeiXinQi\obj\x86\Debug\FeiXinQi.csprojResolveAssemblyReference.cache

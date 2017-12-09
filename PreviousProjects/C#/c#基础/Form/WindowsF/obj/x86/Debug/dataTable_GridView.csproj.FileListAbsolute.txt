@@ -1,0 +1,7 @@
+E:\c#\c#基础\Form\WindowsF\obj\x86\Debug\WindowsF.exe
+E:\c#\c#基础\Form\WindowsF\obj\x86\Debug\WindowsF.pdb
+E:\c#\c#基础\Form\WindowsF\bin\Debug\WindowsF.exe
+E:\c#\c#基础\Form\WindowsF\bin\Debug\WindowsF.pdb
+E:\c#\c#基础\Form\WindowsF\obj\x86\Debug\WindowsF.Form1.resources
+E:\c#\c#基础\Form\WindowsF\obj\x86\Debug\WindowsF.Properties.Resources.resources
+E:\c#\c#基础\Form\WindowsF\obj\x86\Debug\dataTable_GridView.csproj.GenerateResource.Cache

@@ -1,0 +1,5 @@
+E:\c#\c#基础\ConsoleApplication2\Collection\bin\Debug\Collection.exe
+E:\c#\c#基础\ConsoleApplication2\Collection\bin\Debug\Collection.pdb
+E:\c#\c#基础\ConsoleApplication2\Collection\obj\x86\Debug\Collection.exe
+E:\c#\c#基础\ConsoleApplication2\Collection\obj\x86\Debug\Collection.pdb
+E:\c#\c#基础\ConsoleApplication2\Collection\obj\x86\Debug\Collection.csprojResolveAssemblyReference.cache

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a8a79b06-f0af-4987-b60e-48f5fe091dd5" name="Administrator@USER-20160608LK 2017-06-22 09:42:37" runUser="USER-20160608LK\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="3d76eb7e-cc8c-4697-b55f-86215fc69bc1">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_USER-20160608LK 2017-06-22 09_42_37">
+      <DeploymentItem filename="E:\c#\c#基础\Form\Test\bin\Debug\Test.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2017-06-22T09:42:37.5753968+08:00" queuing="2017-06-22T09:42:42.0867408+08:00" start="2017-06-22T09:42:42.4616338+08:00" finish="2017-06-22T09:43:51.5719721+08:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddNumTest" storage="e:\c#\c#基础\form\testadd\bin\debug\testadd.dll" id="0da5fd95-0298-6ff8-9b99-343aac0d8bc6">
+      <Execution id="a522a1c5-cdac-43d4-9ec4-5a4178dcf0d6" />
+      <TestMethod codeBase="E:/c#/c#基础/Form/TestAdd/bin/Debug/TestAdd.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestAdd.AddTest, TestAdd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNumTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" executionId="a522a1c5-cdac-43d4-9ec4-5a4178dcf0d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a522a1c5-cdac-43d4-9ec4-5a4178dcf0d6" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:01:06.2300809" startTime="2017-06-22T09:42:42.7650707+08:00" endTime="2017-06-22T09:43:51.1312041+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a522a1c5-cdac-43d4-9ec4-5a4178dcf0d6">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive 失败。验证此测试方法的正确性。</Message>
+          <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 80
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

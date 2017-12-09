@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  
+  <!-- 字符编码转换过滤器的配置 -->
+  <filter>
+    <filter-name>Encoding</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 控制器的配置 ；控制层的Bean的定义已经在web.xml中定义，而不像业务层中的Bean在spring的配置文件中-->
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>*.spring</url-pattern>
+  </servlet-mapping>
+  
+  
+ <!-- 监听器的配置 :Spring的application.xml的载入；ContextLoaderListener,该监听器的作用是在web容器启动时，自动加载spring的配置文件，自动装配application.xml的配置信息,完成类的初始化工作-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!--注册context-param,在classpath中加载spring的自身配置文件;如果在web.xml中不写任何的application.xml的参数配置信息，默认的路径是“\WEB-INF\applicationContext.xml”,如果是自定义的文件名称可以在web.xml里加入ContextConfigLocation这个context参数 -->
+  <!--context-param是application范围内的参数，该元素用来申明应用范围(整个web项目)内的上下文初始化参数  -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/classes/applicationContext.xml</param-value>
+  </context-param>
+  
+  <!-- 站点默认首页显示地址 -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

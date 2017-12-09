@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<settings>
+   <setting  name="logImpl"    value="LOG4J" />
+   
+   <!-- 懒加载配置 
+                       懒加载的作用:不会立即发送sql语句去查询班级的所有student,
+                       而是等到需要使用到班级的学生属性时候才回去发送sql语句进行查询班级的所有学生，
+                       为了性能的考虑
+                       正常情况下:一对多所关联的集合对象，都应该被设置为懒加载-->
+   <setting  name="lazyLoadingEnabled"   value="true"  />
+   <setting  name="aggressiveLazyLoading"   value="false"  />
+</settings>
+<environments  default="mysql">
+      <environment    id="mysql">
+      <transactionManager    type="JDBC"/>
+      <dataSource   type="POOLED">
+      <property name="driver" value="com.mysql.jdbc.Driver"  />
+      <property name="url" value="jdbc:mysql://localhost:3306/project4?characterEncoding=utf8"  />
+      <property name="username" value="root" />
+      <property name="password" value="1934jy26" />
+      </dataSource>
+      </environment>
+</environments>
+
+<mappers>
+    <mapper   resource="com/mapper/StudentMapper.xml" />
+    <mapper   resource="com/mapper/ClassesMapper.xml" />
+</mappers>
+
+</configuration>
+    
+

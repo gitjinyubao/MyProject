@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function    Dog(name1,sex1)
+{    
+       this.name=name1;
+	   this.sex=sex1;     
+}
+//var   dog=new    Dog("金玉","男");
+//dog.name="金玉";
+//dog.sex="男";
+//alert("name="+dog.name+"\n"+"sex"+dog.sex);
+function    showDog()
+{
+	alert(this.name); 
+	alert(this.sex);   
+}
+var   dog=new    Dog("金玉","男");
+dog.showDog();
+</script>
+</head>
+<body>
+</body>
+</html>

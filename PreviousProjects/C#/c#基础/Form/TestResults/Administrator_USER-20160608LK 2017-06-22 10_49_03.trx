@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="57fda322-aba5-43d8-baa3-d6d540e9cc68" name="Administrator@USER-20160608LK 2017-06-22 10:49:03" runUser="USER-20160608LK\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="3d76eb7e-cc8c-4697-b55f-86215fc69bc1">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_USER-20160608LK 2017-06-22 10_49_03">
+      <DeploymentItem filename="E:\c#\c#基础\Form\Test\bin\Debug\Test.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2017-06-22T10:49:03.8024546+08:00" queuing="2017-06-22T10:49:04.9961925+08:00" start="2017-06-22T10:49:05.0662420+08:00" finish="2017-06-22T10:49:06.6888323+08:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="8" executed="8" passed="8" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="USER-20160608LK" outcome="Warning" timestamp="2017-06-22T10:49:03.8352801+08:00">
+        <Text>当前已禁用部署。未部署测试“TestAdd.AddTest.AddNumTest”中的部署项“TestAdd\test.csv”。</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddNumTest" storage="e:\c#\c#基础\form\testadd\bin\debug\testadd.dll" id="0da5fd95-0298-6ff8-9b99-343aac0d8bc6">
+      <DeploymentItems>
+        <DeploymentItem filename="TestAdd\test.csv" />
+      </DeploymentItems>
+      <Execution id="9bc5fcd8-058f-41fc-9add-57c3e515bf19" />
+      <TestMethod codeBase="E:/c#/c#基础/Form/TestAdd/bin/Debug/TestAdd.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestAdd.AddTest, TestAdd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNumTest" />
+      <DataSource connectionString="|DataDirectory|\test.csv" providerInvariantName="Microsoft.VisualStudio.TestTools.DataSource.CSV" tableName="test#csv" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" executionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.3244989" startTime="2017-06-22T10:49:05.1037760+08:00" endTime="2017-06-22T10:49:06.6118749+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" resultType="DataDrivenTest">
+      <Counters error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="7" completed="0" inProgress="0" pending="0" />
+      <InnerResults>
+        <UnitTestResult executionId="435ca8e1-76c0-4668-9f2a-627a672b3684" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0275730" startTime="2017-06-22T10:49:06.5094490+08:00" endTime="2017-06-22T10:49:06.5404865+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="0" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="99a3bda2-c6fc-4917-ab06-d24aebad17c7" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000397" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5409873+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="1" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="b84f332f-3913-42a4-80b0-12b14f4cb481" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000098" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5409873+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="2" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="0401094f-46f5-4c9d-b448-a1d86dfc6ece" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000111" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5409873+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="3" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="7f27c2fd-16ac-46a7-ab29-1d8fc21d57c9" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000124" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5409873+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="4" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="f0d5018f-eeed-4b45-b705-0fb4608a8e51" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000089" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5409873+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="5" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="415b0fdf-98eb-415b-a885-6112cb324e0c" parentExecutionId="9bc5fcd8-058f-41fc-9add-57c3e515bf19" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000136" startTime="2017-06-22T10:49:06.5409873+08:00" endTime="2017-06-22T10:49:06.5414872+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bc5fcd8-058f-41fc-9add-57c3e515bf19" dataRowInfo="6" resultType="DataDrivenDataRow" />
+      </InnerResults>
+    </UnitTestResult>
+  </Results>
+</TestRun>

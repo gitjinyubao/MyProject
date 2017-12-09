@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.RoleMapper">
+<resultMap   id="RoleMap"  type="com.entity.Role">
+<result   property="id"    column="id"/>
+<result   property="rolenumber"    column="rolenumber"/>
+<result   property="name"    column="name"/>
+<collection property="users"    column="id"  select="mapper.UserMapper.findByRolerId" ></collection>
+</resultMap>
+
+<select id="findById"  resultType="com.entity.Role">
+     select *  from   t_role1   where   id=#{id};
+</select>
+<select id="findById1" resultMap="RoleMap" parameterType="int">
+     select *  from   t_role1   where   id=#{id};
+</select>
+
+</mapper>

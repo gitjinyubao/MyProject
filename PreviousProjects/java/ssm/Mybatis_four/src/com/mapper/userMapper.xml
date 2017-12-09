@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.userMapper">
+<insert   id="insert"    parameterType="com.entity.User">
+   insert    tbl_user1(id,username)    values(#{id},#{username})
+</insert>
+
+<select   id="select"   resultType="com.entity.User">
+    select   *   from    tbl_user1
+</select>
+
+
+</mapper>

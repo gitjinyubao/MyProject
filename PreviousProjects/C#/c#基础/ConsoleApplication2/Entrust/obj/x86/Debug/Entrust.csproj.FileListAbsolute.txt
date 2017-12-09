@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\Entrust\bin\Debug\Entrust.exe
+E:\c#\c#基础\ConsoleApplication2\Entrust\bin\Debug\Entrust.pdb
+E:\c#\c#基础\ConsoleApplication2\Entrust\obj\x86\Debug\Entrust.exe
+E:\c#\c#基础\ConsoleApplication2\Entrust\obj\x86\Debug\Entrust.pdb

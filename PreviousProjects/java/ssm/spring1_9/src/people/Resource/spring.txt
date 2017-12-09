@@ -1,0 +1,2 @@
+1.所有applicationContext都实现了ResourLoader接口，而applicationContext是由applicationContextAware这个接口通过set方法创建；
+2.spring容器创建过程中都会通过调用set方法创建applicationContext

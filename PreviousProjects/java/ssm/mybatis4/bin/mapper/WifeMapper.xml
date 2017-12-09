@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.WifeMapper">
+
+<resultMap   type="Wife" id="WifeMap">
+<id   property="id"    column="id" />
+<result   property="w_name"   column="w_name"   />
+<association property="huspand"    column="id"   select="mapper.HuspandMapper.findById"></association>
+</resultMap>
+
+<select   id="findById1"    resultType="Wife"  parameterType="int">
+      select   *  from    w_wife   where   id=#{id}
+</select>
+</mapper>

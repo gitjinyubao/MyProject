@@ -1,0 +1,6 @@
+E:\c#\c#基础\Form\Test\bin\Debug\Test.exe
+E:\c#\c#基础\Form\Test\bin\Debug\Test.pdb
+E:\c#\c#基础\Form\Test\obj\x86\Debug\Test.Properties.Resources.resources
+E:\c#\c#基础\Form\Test\obj\x86\Debug\Test.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\Test\obj\x86\Debug\Test.exe
+E:\c#\c#基础\Form\Test\obj\x86\Debug\Test.pdb

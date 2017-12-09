@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper   namespace="com.dao.GreensDao">
+<resultMap   id="greensMap"     type="com.entity.Greens">
+<result   property="id"   column="id"/>
+<result   property="name"    column="name"/>
+<collection   property="list"    column="id"    javaType="ArrayList"   
+ofType="com.entity.Plate"   select="com.dao.PlateDao.selectPlateByGreensId"  
+fetchType="lazy">
+<result   property="id"    column="id"/>
+<result   property="color"    column="color"/>
+</collection>
+<collection   property="list1"    column="id"    javaType="ArrayList"   
+ofType="com.entity.Material"  fetchType="lazy"   
+select="com.dao.MaterialDao.selectMaterialByGreensId">
+<result property="id"   column="id"/>
+<result property="name"   column="name" />
+</collection>
+</resultMap>
+
+<select   id="getGreensById"   parameterType="int"   resultMap="greensMap">
+     select    g.*    from   gre_tbl as  g  where   g.id=#{id}
+</select>
+
+<!-- 注意使用别名 -->
+<select   id="selectGreensByMaterialId"    parameterType="int"    resultType="com.entity.Greens">
+   select    g.*    from   gre_tbl as  g  where   g.id  IN(
+   select    c.g_id  from   coo_tbl  as  c where   c.m_id=#{id}  )
+</select>
+
+</mapper>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="H5_Dragged">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="/H5_Dragged"/>
+        <property name="java-output-path" value="/H5_Dragged/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

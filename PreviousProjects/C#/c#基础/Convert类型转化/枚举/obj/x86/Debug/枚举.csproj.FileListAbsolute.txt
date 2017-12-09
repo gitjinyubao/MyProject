@@ -1,0 +1,4 @@
+E:\c#\c#基础\Convert类型转化\枚举\bin\Debug\枚举.exe
+E:\c#\c#基础\Convert类型转化\枚举\bin\Debug\枚举.pdb
+E:\c#\c#基础\Convert类型转化\枚举\obj\x86\Debug\枚举.exe
+E:\c#\c#基础\Convert类型转化\枚举\obj\x86\Debug\枚举.pdb

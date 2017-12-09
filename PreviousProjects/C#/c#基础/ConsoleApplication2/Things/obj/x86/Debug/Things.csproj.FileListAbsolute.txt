@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\Things\bin\Debug\Things.exe
+E:\c#\c#基础\ConsoleApplication2\Things\bin\Debug\Things.pdb
+E:\c#\c#基础\ConsoleApplication2\Things\obj\x86\Debug\Things.exe
+E:\c#\c#基础\ConsoleApplication2\Things\obj\x86\Debug\Things.pdb

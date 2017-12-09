@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--自动刷新-->
+<meta  http-equiv="refresh"   content="2"  />
+<title>无标题文档</title>
+<script>
+   function   c()
+   {
+	   
+   }
+</script>
+<style>
+</style>
+</head>
+
+
+<body>
+<time datetime="2013">我们<mark>shide</mark></time>
+<details>
+<summary>xujiezhanshi</summary>
+<div><img  src="../javascript1/images/1.jpg"</div>
+</details>
+<fieldset>
+<legend>输入职业</legend>
+<input   type="text"   list="datalist" contentditable="true"/>
+<datalist   id="datalist">
+<option  value="jin"></option>
+<option   value="yu"></option>
+<option   value="bao"></option>
+</datalist>
+</fieldset>
+
+<form id="u">
+<input   type="text"  />
+</form>
+<input   type="text"  form="u"/>
+<br /><br />
+图片式按钮==submit
+<input  type="image"     src="../javascript1/images/1.jpg"  width="400"  height="300" /><!--定义图像形式的提交按钮-->
+
+<br />
+你想去：
+<input  type="text"   list="src" />
+<datalist  id="src">
+<option  label="baidu" value="http://www.baidu.com"></option>
+<option  label="qq" value="http://www.qq.com"></option>
+</datalist>
+<br />
+规定输入值与规范
+<input  type="number"   max="10"  min="0"   step="2" />
+<br />
+multiple规定输入域中可以选择多个值
+<input  type="file"multiple="multiple"  name="img"/>
+<br />
+描述期待的输入值
+<input   type="text"   placeholder="jin" />
+<br />
+require规定提交之前输入域不能为空
+<form>
+<input  type="text"   required="required" id='j'/>
+<input  type="submit"   value="提交" />
+</form>
+</body>
+</html>

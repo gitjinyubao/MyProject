@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="53915b62-b346-4067-8d3d-4427a519c1d3" name="Administrator@USER-20160608LK 2017-06-22 10:23:19" runUser="USER-20160608LK\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="3d76eb7e-cc8c-4697-b55f-86215fc69bc1">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment userDeploymentRoot="E:\c#\c#基础\Form\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Administrator_USER-20160608LK 2017-06-22 10_23_19">
+      <DeploymentItem filename="E:\c#\c#基础\Form\Test\bin\Debug\Test.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2017-06-22T10:23:19.0046473+08:00" queuing="2017-06-22T10:23:20.1425224+08:00" start="2017-06-22T10:23:20.2224656+08:00" finish="2017-06-22T10:23:22.0356270+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="8" executed="8" error="0" failed="8" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="USER-20160608LK" outcome="Warning" timestamp="2017-06-22T10:23:19.1006143+08:00">
+        <Text>当前已禁用部署。未部署测试“TestAdd.AddTest.AddNumTest”中的部署项“TestAdd\test.csv”。</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddNumTest" storage="e:\c#\c#基础\form\testadd\bin\debug\testadd.dll" id="0da5fd95-0298-6ff8-9b99-343aac0d8bc6">
+      <DeploymentItems>
+        <DeploymentItem filename="TestAdd\test.csv" />
+      </DeploymentItems>
+      <Execution id="024e319c-1704-4acb-964a-775e3352fc50" />
+      <TestMethod codeBase="E:/c#/c#基础/Form/TestAdd/bin/Debug/TestAdd.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestAdd.AddTest, TestAdd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNumTest" />
+      <DataSource connectionString="|DataDirectory|\test.csv" providerInvariantName="Microsoft.VisualStudio.TestTools.DataSource.CSV" tableName="test#csv" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" executionId="024e319c-1704-4acb-964a-775e3352fc50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.8631867" startTime="2017-06-22T10:23:20.2509923+08:00" endTime="2017-06-22T10:23:21.9189324+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" resultType="DataDrivenTest">
+      <Counters error="0" failed="7" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+      <InnerResults>
+        <UnitTestResult executionId="5d392df1-5528-4f07-9f29-eee9926c597f" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.2006197" startTime="2017-06-22T10:23:21.5605097+08:00" endTime="2017-06-22T10:23:21.7669541+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="0" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;2&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="0fe9deb0-fc32-4c80-8f00-c2d401f25deb" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0022238" startTime="2017-06-22T10:23:21.7669541+08:00" endTime="2017-06-22T10:23:21.7689538+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="1" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;4&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="b94459dc-c509-4c7b-a477-2af71560d2df" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0019235" startTime="2017-06-22T10:23:21.7689538+08:00" endTime="2017-06-22T10:23:21.7709749+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="2" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;6&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="1c321111-5def-40a9-b3ac-4256ea7673f7" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0021408" startTime="2017-06-22T10:23:21.7709749+08:00" endTime="2017-06-22T10:23:21.7734570+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="3" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;8&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="f3f6d7f9-bdb5-4519-9a20-1a67b492b1d2" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0016990" startTime="2017-06-22T10:23:21.7734570+08:00" endTime="2017-06-22T10:23:21.7749581+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="4" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;10&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="dafd928d-2a24-470f-974d-6b5faefcf325" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0205881" startTime="2017-06-22T10:23:21.7749581+08:00" endTime="2017-06-22T10:23:21.7954667+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="5" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>Assert.AreEqual 失败。应为: &lt;0&gt;，实际为: &lt;12&gt;。</Message>
+              <StackTrace>   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 81
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+        <UnitTestResult executionId="c2410832-dc69-4ded-b557-b9db7024aae8" parentExecutionId="024e319c-1704-4acb-964a-775e3352fc50" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0889312" startTime="2017-06-22T10:23:21.7954667+08:00" endTime="2017-06-22T10:23:21.8846696+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="024e319c-1704-4acb-964a-775e3352fc50" dataRowInfo="6" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>测试方法 TestAdd.AddTest.AddNumTest 引发了异常: 
+System.InvalidCastException: 对象不能从 DBNull 转换为其他类型。</Message>
+              <StackTrace>    在 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 75
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+      </InnerResults>
+    </UnitTestResult>
+  </Results>
+</TestRun>

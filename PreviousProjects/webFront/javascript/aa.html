@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+<!--
+     var   image=new Array(12);
+	 for(var   i=1;i<=11;i++)
+	 {
+		 image[i]=new Image();
+	 }
+     function   click1()
+	 {
+		 var  src1='file:///E|/javawebProject/javascript1/images/';
+		 var src1=document.getElementById('j').src;
+		 var s;
+		 var src2='file:///E|/javawebProject/javascript1/images/';
+		 if(src1.length>=51)
+		 {
+			 s=src1.substr(src1.length-6,2);
+		 }
+		 else
+		 {
+			 s=src1.substr(src1.length-5,1);
+		 }
+		 s=s-1+2;
+		 if(s==12)
+			 {
+				 s=1;
+			 }
+		 image[s].src=src2+s+'.jpg';
+		 document.getElementById('j').src=image[s].src;	
+	 }
+	 
+function mouse1()
+{
+	var  style1=document.getElementById('j');
+	style1.width=390;
+	style1.height=300;
+}
+function  mouse2()
+{
+	var  style2=document.getElementById('j');
+	style2.width=490;
+	style2.height=340;
+}
+//-->
+</script>
+
+</head>
+
+<body  onload="setInterval(click1,500)">
+<img  id="j"  src="images/1.jpg"
+width="390"   height="300"  onclick="click1()"  onmousemove="mouse1()"  onmouseup="mouse1();"  onmouseout="mouse2();"/>
+</body>
+</html>

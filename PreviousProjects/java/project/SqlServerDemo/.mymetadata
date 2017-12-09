@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SqlServerDemo"
+  id="myeclipse.1496641622095"
+  context-root="/SqlServerDemo"
+  j2ee-spec="5.0"
+  archive="SqlServerDemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

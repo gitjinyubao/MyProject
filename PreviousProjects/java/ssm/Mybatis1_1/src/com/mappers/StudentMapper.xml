@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mappers.StudentMapper">
+<resultMap   id="StudentMap"    type="com.entity.Student">
+<result    property="id"    column="id"  />
+<result    property="name"    column="name"  />
+<result    property="stu_number"    column="stu_number"   />
+<association    property="stu_cla"   javaType="com.entity.StudentsClass" column="cid"  select="selectClassById"  />
+</resultMap>
+
+<sql   id="sql1">select   *  from</sql>
+
+<select   id="selectClassById"    resultType="com.entity.StudentsClass">
+   select  * from cla_tbl  where   id=#{id}   
+</select>
+
+
+<select  id="selectAll"       resultMap="StudentMap" >
+   select  * from     stu_tbl   
+</select>    
+</mapper>

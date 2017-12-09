@@ -1,0 +1,9 @@
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.com.frontForm.login.resources
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.Properties.Resources.resources
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\DateSourceOne\bin\Debug\DateSourceOne.exe
+E:\c#\c#基础\Form\DateSourceOne\bin\Debug\DateSourceOne.pdb
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.exe
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.pdb
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.csprojResolveAssemblyReference.cache
+E:\c#\c#基础\Form\DateSourceOne\obj\x86\Debug\DateSourceOne.com.frontForm.userHomePage.resources

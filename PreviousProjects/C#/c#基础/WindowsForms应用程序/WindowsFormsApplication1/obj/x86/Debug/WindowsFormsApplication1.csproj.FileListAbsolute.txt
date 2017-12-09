@@ -1,0 +1,7 @@
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+E:\c#\c#基础\WindowsForms应用程序\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

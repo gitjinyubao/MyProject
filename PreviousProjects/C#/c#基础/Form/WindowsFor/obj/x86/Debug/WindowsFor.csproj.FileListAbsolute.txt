@@ -1,0 +1,8 @@
+E:\c#\c#基础\Form\WindowsFor\bin\Debug\WindowsFor.exe
+E:\c#\c#基础\Form\WindowsFor\bin\Debug\WindowsFor.pdb
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.Properties.Resources.resources
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.exe
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.pdb
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.Form1.resources
+E:\c#\c#基础\Form\WindowsFor\obj\x86\Debug\WindowsFor.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+E:\c#\c#基础\Form\MultiDocument\bin\Debug\MultiDocument.exe
+E:\c#\c#基础\Form\MultiDocument\bin\Debug\MultiDocument.pdb
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.Form1.resources
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.Form2.resources
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.Properties.Resources.resources
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.exe
+E:\c#\c#基础\Form\MultiDocument\obj\x86\Debug\MultiDocument.pdb

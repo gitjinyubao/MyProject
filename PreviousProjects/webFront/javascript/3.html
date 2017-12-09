@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+<!--
+var  src=new Array(12);
+var length='file:///E:/javawebProject/javascript1/images/1.jpg'.length;
+for(var i=1;i<12;++i)
+{
+	//src[i]="objImage"+i;
+	src[i]=new Image();//图片缓冲技术
+	src[i].src='file:///E:///javawebProject///javascript1/images///'+i+'.jpg';
+}//javascript 中引用变量的特殊性;
+alert(src[11].src);
+function   click2()
+{
+	var i2;
+	var  i=document.getElementById('j').src;
+	if(i.length<57)
+	{	
+	i2=i.substr(i.length-5,1);
+	}
+	else
+	{
+		i2=i.substr(i.length-6,2);
+	}
+	i2=i2-1+1;
+	if(i2>=11)
+	{
+		i2=1;
+	}
+	else
+	{
+	    i2=i2+1;
+	}
+	document.getElementById('j').src=src[i2].src;
+}
+function   click1()
+{
+	var i3;
+	var i2;
+	var  i=document.getElementById('j').src;
+
+	var i1=i.substr(0,i.length-5);
+	i2=i.substr(i.length-5,1);
+	i2=i2-1+1;
+	var i4=i2;
+	if(i2==9)
+	{
+		i3=1;
+	}
+	else
+	{
+	    i3=i2-1+2;
+	}
+	var src=i1+i3+".jpg";
+	document.getElementById('j').src=src;
+}
+function   width1()
+{
+	document.getElementById('j').width=600;
+	document.getElementById('j').height=370;
+	
+}
+function   width2()
+{
+	document.getElementById('j').width=450;
+	document.getElementById('j').height=270;
+	document.getElementById('j').border=2;
+	
+}
+//-->
+</script>
+</head>
+<body   onload="setInterval(click2,1000)"><!--注意写法-->
+<img id="j" src="file:///E:///javawebProject///javascript1/images///1.jpg "  width="450"  height="370"  onclick="click1();"   onmousemove="width1();"  onmouseout="width2()"  />
+<ol>
+<li><a  href="a3.html"   target="jin">框架中打开页面</a></li>
+<li><a  href="a4.html"   target="jin">框架中打开页面</a></li>
+<li><a  href="a5.html"   target="jin">框架中打开页面</a></li>
+<li><a  href="a6.html"   target="jin">框架中打开页面</a></li><!-- 在目标网页中打开此网页-->
+</ol>
+</body>
+</html>

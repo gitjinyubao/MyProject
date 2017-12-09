@@ -1,0 +1,10 @@
+E:\c#\c#基础\Form\TestAdd\bin\Debug\TestAdd.dll
+E:\c#\c#基础\Form\TestAdd\bin\Debug\TestAdd.pdb
+E:\c#\c#基础\Form\TestAdd\bin\Debug\Test.exe
+E:\c#\c#基础\Form\TestAdd\bin\Debug\Test.pdb
+E:\c#\c#基础\Form\TestAdd\obj\Debug\TestAdd.csprojResolveAssemblyReference.cache
+E:\c#\c#基础\Form\TestAdd\obj\Debug\TestAdd.dll
+E:\c#\c#基础\Form\TestAdd\obj\Debug\TestAdd.pdb
+E:\c#\c#基础\Form\TestAdd\bin\Debug\test.csv
+E:\c#\c#基础\Form\TestAdd\obj\Debug\TestAdd.Properties.Resources.resources
+E:\c#\c#基础\Form\TestAdd\obj\Debug\TestAdd.csproj.GenerateResource.Cache

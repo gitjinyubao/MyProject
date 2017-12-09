@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert类型转化", "Convert类型转化\Convert类型转化.csproj", "{37F145FD-8989-4976-B803-1BF50CB49EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "枚举", "枚举\枚举.csproj", "{A58C589D-9150-465D-BCB9-63AB4360724C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37F145FD-8989-4976-B803-1BF50CB49EEE}.Debug|x86.ActiveCfg = Debug|x86
+		{37F145FD-8989-4976-B803-1BF50CB49EEE}.Debug|x86.Build.0 = Debug|x86
+		{37F145FD-8989-4976-B803-1BF50CB49EEE}.Release|x86.ActiveCfg = Release|x86
+		{37F145FD-8989-4976-B803-1BF50CB49EEE}.Release|x86.Build.0 = Release|x86
+		{A58C589D-9150-465D-BCB9-63AB4360724C}.Debug|x86.ActiveCfg = Debug|x86
+		{A58C589D-9150-465D-BCB9-63AB4360724C}.Debug|x86.Build.0 = Debug|x86
+		{A58C589D-9150-465D-BCB9-63AB4360724C}.Release|x86.ActiveCfg = Release|x86
+		{A58C589D-9150-465D-BCB9-63AB4360724C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

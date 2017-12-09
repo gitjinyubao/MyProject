@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper   namespace="com.dao.EmployeeDao">
+
+<resultMap   id="EmployeeMap"    type="com.entity.Employee">
+<result   property="id"    column="id"/>
+<result   property="name"    column="name"/>
+<result   property="sex"    column="sex"/>
+</resultMap>
+
+
+<!-- MyBatis中，#{id}表达式获取参数有两种方式：一种：
+从javaBean中获取获取property对象，二是：从HashMap集合中获取Property对象 -->
+
+
+
+<select    id="getEmployeeById"       parameterType="int"     resultMap="EmployeeMap">
+    select    *  from    emp_tbl     where    id=#{id}
+</select>
+
+<insert    id="insertEmployee"         parameterType="com.entity.Employee"     >
+    insert     emp_tbl(name,sex)     values(#{name},#{sex})  
+</insert>
+
+<delete    id="deleteEmployeeById"     parameterType="int"     >
+    delete   from   emp_tbl               where      id=#{id}
+</delete>
+
+<update    id="updateEmployeeById"     parameterType="com.entity.Employee"     >
+    update     emp_tbl   set    name=#{name}  , sex=#{sex}    where   id=#{id}
+</update>
+
+
+
+<!-- 动态sql语句 -->
+
+<!-- HashMap传参数时不必要说明参数类型：parameterType -->
+<select    id="getListEmployeeById"           resultMap="EmployeeMap">
+    select    *  from    emp_tbl     where    sex='女'   
+    <if    test="id!=null">
+          and   id=#{id}  
+    </if>
+    <if    test="name=!null">
+          and  name=#{name}
+    </if> 
+</select>
+
+<!-- 起始wehre语句后面一定要接点语句 -->
+<select    id="getListEmployee"           resultMap="EmployeeMap">
+    select    *  from    emp_tbl     where     1=1
+    <choose>
+    <when  test="id!=null">
+       and   id=#{id}
+    </when>
+    <when   test="name!=null  and   sex!=null">
+       and   name=#{name}    and   sex=#{sex}
+    </when>
+    </choose>
+</select>
+
+
+<select    id="getListEmployeeWhere"           resultMap="EmployeeMap">
+    select    *  from    emp_tbl     
+   <where>
+   <if   test="name!=null  and   sex!=null">
+        and   name=#{name}    and   sex=#{sex}
+   </if>
+   <if   test="id!=null">
+        and   id=#{id}
+   </if>
+   </where>
+</select>
+
+<!-- set适用于动态更新 -->
+<update    id="updateEmployeeSet"         parameterType="com.entity.Employee"     >
+    update     emp_tbl  
+    <set >
+    <if  test="name!=null">name=#{name},</if>
+    <if  test="sex!=null">sex=#{sex}</if>
+    </set>
+    where    id=#{id}
+</update>
+
+<!-- List集合形式的参数传入也是不需要用parameterType表示参数类型 -->
+<select    id="getListEmployeeByListId"            resultMap="EmployeeMap">
+    select    *  from    emp_tbl     where    id   in 
+     <foreach   item="item"   index="index"   collection="list"
+               open="("   separator=","  close=")">
+               #{item}
+    </foreach> 
+</select>
+
+<!-- 模糊查询bind:对传进来的参数进行修改 -->
+<select    id="getListEmployeeBind"            resultMap="EmployeeMap">
+<bind   name="pattern1"  value="'%'+_parameter.getName()+'%'"/>
+    select    *  from    emp_tbl     where    name  like  #{pattern1}
+    
+</select>
+</mapper>

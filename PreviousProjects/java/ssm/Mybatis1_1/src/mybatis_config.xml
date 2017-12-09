@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- xml文件包含了Mybatis系统的核心设置 -->
+<configuration>
+<!-- 指定Mybatis所用日志的具体实现 -->
+<settings>
+    <setting   name="logImpl"    value="LOG4J"  />
+</settings> 
+<!-- 环境配置，即连接数据库 -->
+<environments   default="mysql">
+    <environment   id="mysql"   >
+    <!-- 指定事务管理类型，type="IDBC"表示直接使用JDBC的提交与回滚 设置-->
+    <transactionManager   type="JDBC" />
+    <!-- 数据源配置，pooled是jdbc连接对象的数据源连接池的实现 -->
+    <dataSource   type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/project5"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="1934jy26"></property>
+    </dataSource>
+    </environment>
+</environments>
+<!-- mappers告诉Mybatis去哪里找持久化类的映射文件 -->
+<mappers>
+       <mapper    resource="com/mappers/StudentMapper.xml"  />
+       
+       <mapper    resource="com/mappers/StudentsClass.xml"   />
+</mappers>
+</configuration>
+

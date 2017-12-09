@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>隐藏与显示</title>
+<script>
+     function    change(type)
+	 {
+		      document.getElementById('j').style.overflow=type;
+	 }
+	 function    change1(type)
+	 {
+		      document.getElementById('j1').style.visibility=type;
+	 }
+	 function    change2(type)
+	 {
+		      document.getElementById('j2').style.display=type;
+	 }
+	  function    change3()
+	 {
+		      var zuoBiao=document.getElementById('z').value;
+			  var dian=zuoBiao.indexOf(',');
+			  var x=zuoBiao.substr(1,dian-1)-1+1;
+			  var y=zuoBiao.substr(dian-1+2,zuoBiao.length-2-dian);
+			  var s=document.getElementById('j3').style.width=x+'px';
+			  var s1=document.getElementById('j3').style.height=y+'px';	  
+	 }
+	 //如果不是元素本身具有的性质，则必须加上style，因为是通过style而规定的属性，而style属性时是任何元素的属性；
+	 function     change4()
+	 {
+		    
+		     document.getElementById('j4').style.position='absolute';
+		     var zuoBiao=document.getElementById('z1').value;
+			 var dian=zuoBiao.indexOf(',');
+			 var x=zuoBiao.substr(1,dian-1)-1+1;
+			 var y=zuoBiao.substr(dian-1+2,zuoBiao.length-2-dian);
+			document.getElementById('j4').style.left=x+"px";
+			
+			document.getElementById('j4').style.top=y+"px";
+			    
+	 }
+	 // <!--如果不是元素本身的属性，则后面需要加上px;-->
+</script>
+<style>
+   div
+   {
+	   border:#F09  inset 4px;
+	   background-color:#093;
+	   height:50px;
+	   width:100px;
+   }
+  
+</style>
+</head>
+
+<body>
+<div   id="j">
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+</div>
+
+<input   type="button"     value="显示"   onclick="change('visible');" />
+<input   type="button"     value="隐藏"   onclick="change('hidden');" />
+<input   type="button"     value="滑轮"   onclick="change('scroll');" />
+<input   type="button"     value="自动"   onclick="change('auto');" />
+<br>
+<br>
+<hr>
+
+<div   id="j1">
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+</div>
+<input   type="button"     value="显示"   onclick="change1('visible');" />
+<input   type="button"     value="隐藏"   onclick="change1('hidden');" />
+<br />
+<br />
+<hr>
+
+
+<div   id="j2">
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+</div>
+<input   type="button"     value="显示"   onclick="change2('block');" />
+<input   type="button"     value="隐藏"   onclick="change2('none');" />
+<hr />
+<br />
+
+
+<div   id="j3">
+kkkkkkk
+</div>
+<input   type="text"   id="z"  value="(,)" />
+<br />
+<input   type="button"     value="显示新的大小"   onclick="change3();" />
+<hr />
+<br />
+
+<div   id="j4">
+kkkkkkkmmmmmmmm
+</div>
+<input   type="text"   id="z1"  value="(,)" />
+<br />
+<input   type="button"     value="显示位置"   onclick="change4();" />
+</body>
+</html>

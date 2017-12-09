@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\Abstractkind\bin\Debug\Abstractkind.exe
+E:\c#\c#基础\ConsoleApplication2\Abstractkind\bin\Debug\Abstractkind.pdb
+E:\c#\c#基础\ConsoleApplication2\Abstractkind\obj\x86\Debug\Abstractkind.exe
+E:\c#\c#基础\ConsoleApplication2\Abstractkind\obj\x86\Debug\Abstractkind.pdb

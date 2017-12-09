@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_6_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_WEB"/>
+	<classpathentry kind="lib" path="E:/javawebProject/Mybatis与Spring整合jar包/SpringMVC  jar包/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/javawebProject/kindeditor编辑器/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/javawebProject/kindeditor编辑器/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="E:/javawebProject/kindeditor编辑器/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3/ckeditor-java-core-3.5.3-sources.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ckeditor-java-core-3.5.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ckeditor-java-core-3.5.3-sources.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ckeditor-java-core-3.5.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/kindeditor-4.1.10/jsp/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/kindeditor-4.1.10/jsp/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/kindeditor-4.1.10/jsp/lib/json_simple-1.1.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.UserMapper">
+<resultMap type="User" id="UserMap">
+       <id  property="id"    column="id"/>
+       <result   property="username"   column="name"/>
+</resultMap>
+<resultMap type="User" id="UserMap1">
+       <id  property="id"    column="id"/>
+       <result   property="username"   column="name"/>
+</resultMap>
+<select   id="findAll"    resultType="User">
+   select * from  t_user
+</select>
+<select id="findOne"    resultType="User" parameterType="int">
+   select  username  as   name   ,id   from   t_user   where  id=#{id}
+</select>
+<select id="findOne1"    resultType="User" parameterType="int">
+   select  username   ,id   from   t_user   where  id=#{id}
+</select>
+<select id="findone2"  resultMap="UserMap" parameterType="int" >
+     select   * from    t_user1   where   id=#{id}
+</select>
+<select id="findlist"  resultMap="UserMap1" parameterType="map" >
+     select   * from    t_user1   where   id>#{id1}  and   name  like  #{username}
+</select>
+<!--SQL片段 
+<sql  id="sql1">*</sql>
+<select   id="findAll"    resultType="User">
+   select <include   refid="sql1"> from  t_user
+</select>
+ -->
+ <!--动态SQL语句  -->
+ <select id="Dong1FindList"    parameterType="map"  resultMap="UserMap1">
+     select  *  from   t_user1    where    id>2
+     <if test="username!=null">
+     and    name  like  #{username}
+     </if>
+     <if test="id1!=null">
+     and   id> #{id1}
+     </if>
+ </select>
+ 
+ <!-- choose   when   只会选择第一次符合条件的when语句条件 -->
+ <select id="choosewhen"   parameterType="map"    resultMap="UserMap">
+  select  *  from   t_user1    where    1=1
+    <choose>
+        <when test="username!=null">
+        and   name  like   #{username}
+        </when>
+        <when test="username!=null">
+        and   id> #{id1}
+        </when>
+    </choose>
+ </select>
+ 
+ 
+<!-- 使用SET   更新;也可以使用trim方法 -->
+<update  id="update1"    parameterType="map" >
+  update   t_user1   
+  <set>
+       <if test="username!=null">
+       name=#{username},<!-- 注意逗号 -->
+       </if>
+  </set>  
+ where    id=2
+</update>
+
+
+<!-- 使用foreach 查询 -->
+<select id="foreach"   parameterType="map"  resultMap="UserMap">
+select    *   from    t_user1    where   pid   in
+<foreach collection="list"   iterm="pidtemp"   open="("close=")"    separator="," >
+       #{pidtemp}
+</foreach>
+</select>
+ 
+</mapper>

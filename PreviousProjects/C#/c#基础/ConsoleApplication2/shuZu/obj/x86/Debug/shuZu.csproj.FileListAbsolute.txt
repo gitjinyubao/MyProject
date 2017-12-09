@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\shuZu\bin\Debug\shuZu.exe
+E:\c#\c#基础\ConsoleApplication2\shuZu\bin\Debug\shuZu.pdb
+E:\c#\c#基础\ConsoleApplication2\shuZu\obj\x86\Debug\shuZu.exe
+E:\c#\c#基础\ConsoleApplication2\shuZu\obj\x86\Debug\shuZu.pdb

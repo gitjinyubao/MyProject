@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+<!--
+      var   str="jinyu\"baobao\"";
+      alert(str);
+      function   ji(a,b)
+	  {
+		  var   result=a*b;
+		     return    result;
+	  }
+	  function   reset1(r)
+	  {
+		  alert("结果是："+r);
+		  document.myform.reset();
+	  }
+	  function   start()
+	  {
+		   
+		    var   a=document.myform.a1.value;
+			var   b=document.myform.b1.value;
+			var   result=ji(a,b);
+            reset1(result);
+	  }
+//-->
+</script>
+</head>
+<body    onload="alert('页面加载完毕')">//页面加载事件
+<form   name="myform"    action="">
+<input   type="text"    name="a1" />
+<input   type="text"    name="b1"/>
+<input   type="submit"   value="ji" onclick="start()"/>
+<input   type="reset"    value="danji"   onclick="alert('hahahhahha')" />//最好是不要用同样的双引号两组在同一句中<br />
+<input   type="text"    value=""   onblur="alert('jijiji')" />//失去焦点<br />
+<input   type="text"    value=""   onchange="alert('hahhahhahah')" />//输入框的值改变事<br />件
+<input   type="text"    value="jijijij"   onselect="alert('select')" />//鼠标选入事件<br />
+<input   type="text"    onfocus="alert('hhahahha')"  />//获得焦点事件<br />
+</form>
+</body>
+</html>

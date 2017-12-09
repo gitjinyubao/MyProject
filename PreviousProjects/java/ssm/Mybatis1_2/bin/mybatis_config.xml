@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+             <setting  name="logImpl"    value="LOG4J"/>
+    </settings>
+    <environments  default="mysql">
+    <environment  id="mysql">
+    <transactionManager   type="JDBC" />
+    <dataSource type="POOLED">
+    <property name="driver" value="com.mysql.jdbc.Driver"  />
+    <property name="url" value="jdbc:mysql://localhost:3306/project5?characterEncoding=utf8"  />
+    <!-- 
+             jdbc:mysql://localhost:3306/project5?characterEncoding=utf8&useSSL=false
+             如果有&&符号在XML中会报错，此时应该对其进行转义
+             如果在MXML中使用类似下面的代码
+
+<mx:Button enabled="{a && b}"/>  
+
+会出现这样的错误
+
+"The entity name must immediately follow the '&' in the entity reference." 
+
+一开始我还以为是bug，网上搜了搜才知道似乎是xml的规范中 & 符号需要转义
+ 解决方法:
+
+<mx:Button enabled="{a &amp;&amp; b}"/>
+
+ 
+
+ 
+
+
+
+mxml也就是xml，有些特殊字符是不能直接写的，不然就破坏xml的结构了。下面就是需要转义的字符。
+
+
+<
+ 
+&lt;
+ 
+
+>
+ 
+&gt;
+ 
+
+&
+ 
+&amp;
+ 
+
+“
+ 
+&quot;
+ 
+
+‘
+ 
+&apos; 
+             
+     -->
+    <property name="username" value="root" />
+    <property name="password" value="1934jy26" />
+    </dataSource>
+    </environment>
+    </environments>
+    
+    <mappers>
+    <mapper resource="com/mapper/IdCardMapper.xml"  />
+    <!-- 注意此处的mapper应该写成单标签的模式 -->
+    <mapper resource="com/mapper/PersonMapper.xml"  />
+    
+  <!--
+       如果是URL则后面是file,盘符合后面的//要转义为///,只需要改写第一个的盘符 
+   -->
+    </mappers>
+    
+    
+    <!--
+    
+    The value of attribute "description" associated with an element type "target" must not contain the 
+ '<' character.
+
+ 
+
+ 
+
+因为乱码引起的。重新把这个文件保存为UTF-8编码
+     
+     -->
+  
+</configuration>
+    
+

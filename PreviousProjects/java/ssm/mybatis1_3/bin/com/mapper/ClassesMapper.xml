@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper   namespace="com.dao.ClassesDao">
+
+<resultMap   id="classesMap"   type="com.entity.Classes">
+<result  property="id"    column="id"/>
+<result  property="class_number"    column="class_number"/>
+<result  property="class_name"      column="class_name"  />
+
+<!-- 注意select中写入命名空间的名字 -->
+
+<collection  property="list"   javaType="ArrayList"  ofType="com.entity.Student" 
+ column="id"  select="com.dao.StudentDao.selectStudentByClassId" fetchType="lazy">
+<result  property="id"   column="id" />
+<result  property="name"   column="name" /> 
+</collection>
+</resultMap>
+
+<select   id="selectClaById"    parameterType="int"   resultMap="classesMap">
+    select   *   from    cla_tbl   where   id=#{id}
+</select>
+
+
+</mapper>

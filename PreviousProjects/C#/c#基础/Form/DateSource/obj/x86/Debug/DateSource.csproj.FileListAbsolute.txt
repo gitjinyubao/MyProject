@@ -1,0 +1,9 @@
+E:\c#\c#基础\Form\DateSource\bin\Debug\DateSource.exe
+E:\c#\c#基础\Form\DateSource\bin\Debug\DateSource.pdb
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.Form1.resources
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.Properties.Resources.resources
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.exe
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.pdb
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.Form2.resources
+E:\c#\c#基础\Form\DateSource\obj\x86\Debug\DateSource.csprojResolveAssemblyReference.cache

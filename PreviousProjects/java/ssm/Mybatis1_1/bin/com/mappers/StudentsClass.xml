@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mappers.StudentsClass">
+<resultMap   id="classMap"    type="com.entity.StudentsClass">
+<result    property="id"    column="id"  />
+<result    property="classNumber"    column="classNumber"   />
+<collection   property="list"   javaType="ArrayList"  column="id"    ofType="student"  select="selectStudentsById"  />
+</resultMap>
+
+<sql   id="sql1">select   *  from</sql>
+
+<select   id="selectStudentsById"    resultType="com.entity.Student">
+   select  * from    stu_tbl  where   cid=#{id}   
+</select>
+
+
+<select  id="selectAll"       resultMap="classMap" >
+    select  * from     cla_tbl   
+</select>    
+</mapper>

@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\sealedkind\bin\Debug\sealedkind.exe
+E:\c#\c#基础\ConsoleApplication2\sealedkind\bin\Debug\sealedkind.pdb
+E:\c#\c#基础\ConsoleApplication2\sealedkind\obj\x86\Debug\sealedkind.exe
+E:\c#\c#基础\ConsoleApplication2\sealedkind\obj\x86\Debug\sealedkind.pdb

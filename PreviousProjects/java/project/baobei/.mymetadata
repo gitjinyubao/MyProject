@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="baobei"
+  id="myeclipse.1488024056851"
+  context-root="/baobei"
+  j2ee-spec="6.0"
+  archive="baobei.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

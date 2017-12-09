@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="H5_Dragged"
+  id="myeclipse.1492658136823"
+  context-root="/H5_Dragged"
+  j2ee-spec="6.0"
+  archive="H5_Dragged.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

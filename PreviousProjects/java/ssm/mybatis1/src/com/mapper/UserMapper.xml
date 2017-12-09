@@ -1,0 +1,11 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UserMapper">
+<select id="findAll"   resultType="com.entitty.User">
+    select   *  from   t_user1
+</select>
+<insert   id="insertUser"    parameterType="com.entitty.User">
+<[CDATA[insert  into   t_user1(username,password,account)    value(#{username,password,account1})]]    
+</mapper>
+

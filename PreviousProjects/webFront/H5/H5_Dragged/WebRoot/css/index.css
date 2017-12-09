@@ -1,0 +1,19 @@
+img{
+	height:110px;
+	width:140px;
+	margin-right: 10px;
+}
+.sc{
+	margin-top: 20px;
+}
+#target{
+	border: 5px solid red ;
+	height: 230px;
+	width: 600px;
+}
+#span{
+	margin-top:110px;
+}
+#src{
+	min-height: 110px;
+}

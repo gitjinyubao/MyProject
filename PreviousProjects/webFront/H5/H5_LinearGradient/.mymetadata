@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="H5_LinearGradient"
+  id="myeclipse.1492672136621"
+  context-root="/H5_LinearGradient"
+  j2ee-spec="6.0"
+  archive="H5_LinearGradient.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.PersonDao">
+<resultMap type="com.entity.Person" id="personMap">
+  <result   property="id"  column="id"/>
+  <result   property="name"  column="name"/>
+  <result   property="sex"  column="sex"/>
+  <association property="idCard"  javaType="com.entity.IdCard"  column="person_idcard" select="selectIdCard"></association>
+</resultMap>
+
+<sql id="sql1">select  *   from   </sql> 
+
+<select id="selectIdCard"  resultType="com.entity.IdCard">
+      <include   refid="sql1"/>    idcard_tbl   where   id=#{person_idcard}
+</select>
+
+<select id="selectAllPerson"   resultMap="personMap">
+   select  *   from  person_tbl   
+</select>
+</mapper>

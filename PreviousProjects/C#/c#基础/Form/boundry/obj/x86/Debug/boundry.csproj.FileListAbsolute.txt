@@ -1,0 +1,8 @@
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundary.DialogBox.resources
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundry.Properties.Resources.resources
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundry.csproj.GenerateResource.Cache
+E:\c#\c#基础\Form\boundry\bin\Debug\boundry.exe
+E:\c#\c#基础\Form\boundry\bin\Debug\boundry.pdb
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundry.exe
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundry.pdb
+E:\c#\c#基础\Form\boundry\obj\x86\Debug\boundry.DialogForm.resources

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用转义符号</title>
+<script>
+var   str="jin\"baobao\"jijiji\nkkkkk";
+var   str5="jinnkkkkk";
+//var   s1="jin"baobao"";   这种写法是错误的
+var   str2="jin宝宝";
+var   str2_length=str2.length;
+var   str2_substring=str2.substr(1,2);
+var   str2_substring=str2.substr(1);
+//alert(str2_length);
+//alert(str2_substring);
+var   str3="javascript";
+var   str4="a";
+//alert("a第一次出现的地方是："+str3.indexOf(str4)+"a第二次出现的地方是："+str3.lastIndexOf(str4));
+//alert(str5.toUpperCase());
+//alert(str.toLowerCase());
+var arr=new Array(3);
+arr[0]="jin";
+arr[1]="yu";
+arr[2]="bao";
+arr[3]="gao";
+alert(arr[0]);//数组在创建时可以指定数组长度之外，还可以动态的改变数组的长度，如果指定的数组下标超过了数组的规定长度，则规定顶长度会自动增加到指定的下标长度。
+for(var  i=0;i<arr.length;i++)
+{
+	alert(arr[i]);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

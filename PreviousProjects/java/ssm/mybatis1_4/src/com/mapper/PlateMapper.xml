@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper   namespace="com.dao.PlateDao">
+<resultMap   id="plateMap"    type="com.entity.Plate">
+<result  property="id"   column="id"/>
+<result  property="color"   column="color"/>
+<association    property="greens"     javaType="com.entity.Greens" >
+<result  property="id"   column="id"/>
+<result  property="name"   column="name"/>
+</association>
+</resultMap>
+
+<select    id="getPlateById"   parameterType="int"    resultMap="plateMap">
+   select    *   from    pla_tbl  as p ,gre_tbl  as  g   where  p.g_id=g.id  and p.id=#{id}
+</select>
+
+<select   id="selectPlateByGreensId"   parameterType="int"  resultType="com.entity.Plate">
+   select    *   from   pla_tbl   where    g_id=#{id}
+</select>
+
+</mapper>

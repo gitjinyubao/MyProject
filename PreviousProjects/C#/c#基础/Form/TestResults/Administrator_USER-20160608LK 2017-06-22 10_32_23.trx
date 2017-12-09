@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="202060ec-76bb-4690-87aa-6e0e23506854" name="Administrator@USER-20160608LK 2017-06-22 10:32:23" runUser="USER-20160608LK\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="3d76eb7e-cc8c-4697-b55f-86215fc69bc1">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_USER-20160608LK 2017-06-22 10_32_23">
+      <DeploymentItem filename="E:\c#\c#基础\Form\Test\bin\Debug\Test.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2017-06-22T10:32:23.1038106+08:00" queuing="2017-06-22T10:32:24.8780358+08:00" start="2017-06-22T10:32:24.9826346+08:00" finish="2017-06-22T10:34:11.1046544+08:00" />
+  <ResultSummary outcome="Aborted">
+    <Counters total="8" executed="8" passed="6" error="0" failed="0" timeout="0" aborted="2" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <DebugTrace>W, 17808, 19, 2017/06/22, 10:34:10.692, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.700, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.702, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.704, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.706, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.708, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.709, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+W, 17808, 19, 2017/06/22, 10:34:10.714, USER-20160608LK\QTAgent32.exe, Performance warning: m_test should be null when TestResult is serialized. Please find the offending code and correct it.
+</DebugTrace>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="USER-20160608LK" outcome="Warning" timestamp="2017-06-22T10:32:23.1373152+08:00">
+        <Text>当前已禁用部署。未部署测试“TestAdd.AddTest.AddNumTest”中的部署项“TestAdd\test.csv”。</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddNumTest" storage="e:\c#\c#基础\form\testadd\bin\debug\testadd.dll" id="0da5fd95-0298-6ff8-9b99-343aac0d8bc6">
+      <DeploymentItems>
+        <DeploymentItem filename="TestAdd\test.csv" />
+      </DeploymentItems>
+      <Execution id="ee89cdc7-37ca-45da-9483-41fd9f3110fb" />
+      <TestMethod codeBase="E:/c#/c#基础/Form/TestAdd/bin/Debug/TestAdd.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestAdd.AddTest, TestAdd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNumTest" />
+      <DataSource connectionString="|DataDirectory|\test.csv" providerInvariantName="Microsoft.VisualStudio.TestTools.DataSource.CSV" tableName="test#csv" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" executionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:01:45.8160472" startTime="2017-06-22T10:32:25.0631086+08:00" endTime="2017-06-22T10:34:10.8791558+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" resultType="DataDrivenTest">
+      <Output>
+        <ErrorInfo>
+          <Message>用户中止了测试运行。</Message>
+        </ErrorInfo>
+      </Output>
+      <Counters error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="6" completed="0" inProgress="0" pending="0" />
+      <InnerResults>
+        <UnitTestResult executionId="2694012e-1c65-4db7-89c7-bbebb19528bd" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0471613" startTime="2017-06-22T10:32:26.7828727+08:00" endTime="2017-06-22T10:32:26.8339942+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="0" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="7c5295d9-08e1-4af7-9bb7-56b64c1f4a83" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000354" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:32:26.8344945+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="1" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="88462a55-5b9c-4bf2-9625-13d961caef25" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000081" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:32:26.8344945+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="2" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="3c0ca8fb-f373-4c36-b927-407287298029" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000068" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:32:26.8344945+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="3" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="671f7a35-df85-4547-8aff-82444fd25448" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000068" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:32:26.8344945+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="4" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="2ce92c0f-a6d9-470b-8efb-7d0d44aeddf3" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:00:00.0000068" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:32:26.8344945+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="5" resultType="DataDrivenDataRow" />
+        <UnitTestResult executionId="9c4ca316-3957-4e7d-baa6-0c699586ef8f" parentExecutionId="ee89cdc7-37ca-45da-9483-41fd9f3110fb" testId="0da5fd95-0298-6ff8-9b99-343aac0d8bc6" testName="AddNumTest" computerName="USER-20160608LK" duration="00:01:43.8419246" startTime="2017-06-22T10:32:26.8344945+08:00" endTime="2017-06-22T10:34:10.6766206+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee89cdc7-37ca-45da-9483-41fd9f3110fb" dataRowInfo="6" resultType="DataDrivenDataRow">
+          <Output>
+            <ErrorInfo>
+              <Message>因用户请求或超时中止了测试。</Message>
+              <StackTrace>    在 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 TestAdd.AddTest.AddNumTest() 位置 E:\c#\c#基础\Form\TestAdd\AddTest.cs:行号 75
+</StackTrace>
+            </ErrorInfo>
+          </Output>
+        </UnitTestResult>
+      </InnerResults>
+    </UnitTestResult>
+  </Results>
+</TestRun>

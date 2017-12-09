@@ -1,0 +1,4 @@
+E:\c#\c#基础\ConsoleApplication2\kind\bin\Debug\kind.exe
+E:\c#\c#基础\ConsoleApplication2\kind\bin\Debug\kind.pdb
+E:\c#\c#基础\ConsoleApplication2\kind\obj\x86\Debug\kind.exe
+E:\c#\c#基础\ConsoleApplication2\kind\obj\x86\Debug\kind.pdb
