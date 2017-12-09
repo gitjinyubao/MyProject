@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.table-d table{ background:#F00}
+ 			.table-d table td{ background:#FFF}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>$(document).ready(function() {
+			var visibleVal=$("input:visible").val(); //取得显示的input元素
+			var hiddenVar1=$("input:hidden:eq(0)").val(); //取得第一个隐藏的input的值
+			var hiddenVar2=$("input:hidden:eq(1)").val(); //取得第二个影藏的input的值
+			alert(visibleVal + "\n\r" + hiddenVar1 + "\n\r" + hiddenVar2 + "\n\r");
+}
+
+);</script>
+	</head>
+	<body >
+		<div class="table-d">
+			 <table width="400" border="0" cellspacing="2" cellpadding="0">
+				 <tr>
+					 <td width="105">站名</td>
+					 <td width="181">网址</td>
+					 <td width="112">说明</td>
+				 </tr>
+				 <tr>
+					  <td>DIVCSS5</td>
+					 <td>www.divcss5.com</td>
+					 <td>CSS学习</td>
+				 </tr>
+				 <tr>
+					 <td>CSS5</td>
+					 <td>www.css5.com.cn</td>
+					 <td>CSS切图</td>
+				 </tr>
+			 </table>
+		 </div>
+		 <input type="text" value="显示的input元素"/><br />
+		 <input type="text" value="不显示的input元素" style="display: none;" /><br />
+		 <input type="hidden" value="隐藏域" />		
+	</body>
+</html>

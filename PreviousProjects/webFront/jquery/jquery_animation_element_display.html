@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				//隐藏匹配元素 hide(speed,[callback])
+				//$("img").hide("slow");
+				$("img").hide(2200);
+				
+				//显示匹配元素
+				$("img").show(2000);
+				
+				//切换状态
+				$("input[type='button']").click(function(){
+						$("img").toggle();
+					});
+					
+					//菜单显示与隐藏
+					 /*   $("#display").mouseover(function(){
+					    	alert("1");
+					    	$("#menu").hide();
+					        $("#display").val("显示");
+					    });
+					    $("#display").hover(function(){
+					    	alert("2");
+					    	$("#menu").show();
+					    	$("#display").val("隐藏");
+					    });
+					 */   
+					 
+			    //菜单显示与隐藏
+			    $("#display").toggle(
+			    	function(){
+			    		$("#display").var("显示");
+			    		$("menu").hide();
+			        },
+			        function(){
+			        	$("#display").var("隐藏");
+			    		$("menu").show();
+			        });	
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="img/1.jpg" /><br />
+			<img src="img/2.jpg" /><br />
+			<img src="img/3.jpg" /><br />
+			<input type="button" value="切换状态"/><br />
+		</div>
+		<div id="menu">
+		    <ul>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    </ul>
+		</div>
+		<input id="display" type="button" value="显示菜单" />
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				/*
+				 * 元素的滑动效果
+				 *     滑动显示匹配的元素：
+				 *     slideDown(speed,[callback]):向下增加元素高度动态显示匹配的元素。逐渐向下增加匹配的隐藏元素的高度，知道元素完全显示
+				 *     滑动隐藏匹配的元素：
+				 *     slideUp(speed,[callback]):向上增加元素高度动态显示匹配的元素。逐渐向上增加匹配的隐藏元素的高度，知道元素完全显示
+				 *     通过高度的变化动态切换元素的可见性
+				 *     slideToggle(speed,[callback]):通过高度的变化动态切换元素的可见性，减少或增加高度进行切换
+				 * 
+				 *     $(this).next() 当前元素同级的下个元素，而非子元素，1楼的说法有误
+                 *
+				 *		$(this).children() 是当前元素的下一级元素的集合，就是子元素的集合，而不管子元素的后代元素
+				 *		
+				 *		所以这两个没有什么可比性，前者是找同级元素，后者是找子元素
+				 *		
+				 *		children()和find()倒是有些共性有些区别
+				 *		
+				 *		children()只管它下面一级的元素，而find()是管所有后代元素    
+				 * 
+				 */
+				$("dd").hide();
+				$("dt[class!='title']").toggle(
+					function(){
+						alert("uuu");
+						$(this).css("background-image","url(img/1.jpg)");
+						$(this).next().slideDown("slow");
+					},
+					function(){
+						alert("kkk");
+						$(this).css("background-image","url(img/2.jpg)");
+						$(this).next().slideUp("slow");
+					}
+				);
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="top">
+		</div>
+		<dl>
+			<dt>用户管理</dt>
+			<dd>
+				<div class="item">添加用户</div>
+				<div class="item">删除信息</div>
+			</dd>
+			<dt>商品管理</dt>
+			<dd>
+				<div class="item">添加商品</div>
+				<div class="item">修改商品</div>
+				<div class="item">删除商品</div>
+			</dd>
+			<td>订单管理</td>
+			<dd>
+				<div class="item">订单查询</div>
+				<div class="item">删除订单</div>
+			</dd>
+			<dt class="title"><a href="#">退出系统</a></dt>
+		</dl>
+	</body>
+</html>

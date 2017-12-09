@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			//属性选择器：[type='hidden']
+			$(document).ready(function(){
+				$(":checkbox").attr("checked","checked");
+				$(":radio").attr("checked","checked");
+				$(":image").attr("src","img/1.jpg");
+				$(":file").hide();//隐藏文件域
+				$(":password").val("234");
+				$(":text").val("123");
+				$(":button").attr("disabled","disabled")//设置按钮不可用
+				$(":submit").var("提交");
+				$(":reset").val("重置");
+				//$("#display1").append($("input[type='hidden']").eq(1).val());//显示隐藏域的值
+			});
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="checkbox" />
+			<input type="radio" />
+			<input type="image" /><br />
+			<input type="file" /><br />
+			<input type="password" /><br />
+			<input type="text" /><br />
+			<input type="button" value="button"/><br />
+			<input type="submit" /><br />
+			<input type="reset" /><br />
+			<input type="hidden" value="这是隐藏的值" /><br />
+			<!--<div id="display1"><font color="#FF0000">显示隐藏域的值：</font></div>-->
+		</form>
+	</body>
+</html>

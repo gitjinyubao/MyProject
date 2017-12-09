@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.background{
+				background-color: aquamarine;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("label+p").addClass("background");
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<label>第一个lable标记</label>
+			<p>第一个P标记</p>
+			<p>第二个P标记</p>
+			<fieldset>
+				<legend>标记</legend>
+				<label>第二个lable标记</label>
+				<p>第一个P标记</p>
+				<p>第二个P标记</p>
+			</fieldset>
+		</div>
+	</body>
+</html>

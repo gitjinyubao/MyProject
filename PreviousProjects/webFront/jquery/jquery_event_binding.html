@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				//为按钮加上事件绑定
+				$("input:button").bind("click",function(){
+					alert("您单机了按钮");
+				});
+				$("#click").bind("click",function(){
+					alert("您单机了按钮");
+				});
+				//解除事件绑定
+				$("#click").unbind("click");
+				//绑定一次性事件处理
+				$("#text").one("blur",function(){
+					alert("绑定一次性事件");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input id="click" type="button" value="请单击" />
+		<input id="text" type="text" value="" />
+	</body>
+</html>

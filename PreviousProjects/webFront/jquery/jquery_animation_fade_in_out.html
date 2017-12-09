@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				/*
+				 *实现淡入淡出的动画效果
+				 * 方法：
+				 *     fadeIn(speed,[callback]) 通过增大透明度实现元素的读入淡出效果
+				 *     fadeOut(speed,[callback]) 通过减少透明度实现元素的淡出效果
+				 *     fadeTo(speed,opacity,[callback]) 将匹配元素的不透明度以渐进的方式调整到指定的参数
+				 *     0:全透明
+				 *     1:全不透明
+				 */
+				 $("#fadeIn").click(function(){
+				 	$("#menu").fadeIn(2200);
+				 });
+				 $("#fadeOut").click(function(){
+				 	$("#menu").fadeOut(2200);
+				 });
+				 $("#fadeTo").click(function(){
+				 	$("#menu").fadeTo(2200,0.3);
+				 });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="menu">
+		    <ul>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    	<li>菜单一</li>
+		    </ul>
+		</div>
+		<input id="fadeIn" type="button" value="淡入菜单" />
+		<input id="fadeOut" type="button" value="淡出菜单" />
+		<input id="fadeTo" type="button" value="达到指定透明度" />
+	</body>
+</html>

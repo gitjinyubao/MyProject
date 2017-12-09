@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			//js中常用triggerHandler()方法来模拟用户的操作触发事件
+			//trigger()则会导致浏览器同名的默认行为被执行；典型的时间就是submit()
+			$(document).ready(function(){
+				//模仿触发事件
+				$("#click").bind("click",function(event,msg1,msg2){
+					alert(msg1+msg2);
+				}).trigger("click",["javascript","自学视频教程"]);
+				//模仿悬停事件
+				$("#click").hover(
+					function(){
+						$("#click").css("background","aqua");
+					},
+					function(){
+						$("#click").css("background","#FF0000");
+					}
+				);
+				//模仿鼠标连续单击事件；属于click事件，可通过click的删除，来删除此事件
+				$("#click1").toggle(
+					function(){
+						alert("单数");
+					},
+					function(){
+						alert("双数");
+					}
+				);
+			});
+		</script>
+	</head>
+	<body>
+		<input id="click" type="button" value="普通按钮(模拟用户)" /><br />
+		<input id="click1" type="button" value="单双击按钮(模拟用户)" />
+	</body>
+</html>

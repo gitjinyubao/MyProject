@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.change{
+				font-size: 50px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("input[type=button]").click(function(){
+					$("div,#span").addClass("change");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="default">div 元素</div>
+		<p class="default">p元素</p>
+		<span class="default" id="span">id为span的元素</span>
+		<input type="button" value="为div元素和id为span的元素换皮肤" />
+	</body>
+</html>

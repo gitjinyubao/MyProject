@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("input[type='button']").click(function(){
+					$("div").eq(0).html("<img src='img/3.jpg'/> 这里长出虹之玉");//获取的第一个div元素
+					$("div").eq(1).html("<img src='img/2.jpg' />这里还是生石花");//获取第二个div元素
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div><img src="img/1.jpg">多肉</div>
+		<div><img src="img/2.jpg">生石花</div>
+		<input type="button" value="几年后" />
+	</body>
+</html>

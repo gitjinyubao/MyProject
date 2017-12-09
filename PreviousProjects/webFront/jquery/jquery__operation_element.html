@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				
+				//对元素内容进行操作（text/html）
+				var text=$("div").text();
+				alert(text);
+				$("div").text("new");
+				text=$("div").text();
+				alert(text);
+				var html=$("div").html();
+				alert(html);
+				$("div").html("<p>new content</p>");
+				html=$("div").html();
+				alert(html);
+				
+				/*
+				 * 对元素值进行操作:数组形式表示（枚举）：[]
+				 */
+				$("select").val(['列表1','列表3']);
+				alert($("select").val());
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<span>
+				<p>
+					p
+					<label>lable</label>
+				</p>
+			</span>
+		</div>
+		<!--
+        	作者：offline
+        	时间：2017-06-29
+        	描述：多选使用multiple="multiple
+        -->
+		<select multiple="multiple">
+			<option>列表1</option>
+			<option selected="selected">列表2</option>
+			<option>列表3</option>
+			<option selected="selected">列表4</option>
+		</select>
+	</body>
+</html>

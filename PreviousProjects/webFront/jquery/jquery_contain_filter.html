@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.first{
+				background-color: darkgray;
+			}
+			.odd{
+				background-color: bisque;
+			}
+			.even{
+				background-color: aqua;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("td:parent").css("background-color","#00FFFF");//为不为空的单元格设置背景颜色
+				$("td:empty").html("暂时无内容");//为空的单元格添加内容
+				$("td:contains('java')").css("color","red");//将含有文本java的单元格的文字颜色设置为红色
+			});
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>编号</td>
+				<td>书名</td>
+				<td>价格</td>
+				<td>日期</td>
+			</tr>
+			<tr>
+				<td>110</td>
+				<td>数学</td>
+				<td>120</td>
+				<td>2017-06-12</td>
+			</tr>
+			<tr>
+				<td>110</td>
+				<td>数学</td>
+				<td>120</td>
+				<td>2017-06-12</td>
+			</tr>
+			<tr>
+				<td>110</td>
+				<td>java</td>
+				<td>120</td>
+				<td>2017-06-12</td>
+			</tr>
+			<tr>
+				<td>110</td>
+				<td>数学</td>
+				<td>120</td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
