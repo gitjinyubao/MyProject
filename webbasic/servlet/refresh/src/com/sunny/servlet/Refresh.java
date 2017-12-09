@@ -24,7 +24,7 @@ public class Refresh extends HttpServlet {
 	
 	// 实现自动跳转 
 	private void test3(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String message = "<meta http-equiv='refresh' content='3;url=refresh/index.jsp'>恭喜您，登陆成功，浏览器将在3秒内返回首页，如果没有跳转，请点击<a href=''>超链接</a>";
+		String message = "<meta http-equiv='refresh' content='3;url=/refresh/index.jsp'>恭喜您，登陆成功，浏览器将在3秒内返回首页，如果没有跳转，请点击<a href=''>超链接</a>";
 		this.getServletContext().setAttribute("message", message);
 		this.getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
 	}

@@ -9,7 +9,7 @@
 <body>
   <%
     String message = (String) application.getAttribute("message");
-    out.write("ff");
+    out.write(message);
   %>
 </body>
 </html>
