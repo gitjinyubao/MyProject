@@ -1,0 +1,5 @@
+c:\users\金大帅win7\documents\visual studio 2010\Projects\利用Array操作数组\利用Array操作数组\bin\Debug\利用Array操作数组.exe
+c:\users\金大帅win7\documents\visual studio 2010\Projects\利用Array操作数组\利用Array操作数组\bin\Debug\利用Array操作数组.pdb
+c:\users\金大帅win7\documents\visual studio 2010\Projects\利用Array操作数组\利用Array操作数组\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\金大帅win7\documents\visual studio 2010\Projects\利用Array操作数组\利用Array操作数组\obj\x86\Debug\利用Array操作数组.exe
+c:\users\金大帅win7\documents\visual studio 2010\Projects\利用Array操作数组\利用Array操作数组\obj\x86\Debug\利用Array操作数组.pdb

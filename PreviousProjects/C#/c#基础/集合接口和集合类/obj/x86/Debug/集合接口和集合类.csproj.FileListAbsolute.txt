@@ -1,0 +1,5 @@
+C:\Users\金大帅Win7\documents\visual studio 2010\Projects\集合\集合接口和集合类\bin\Debug\集合接口和集合类.exe
+C:\Users\金大帅Win7\documents\visual studio 2010\Projects\集合\集合接口和集合类\bin\Debug\集合接口和集合类.pdb
+C:\Users\金大帅Win7\documents\visual studio 2010\Projects\集合\集合接口和集合类\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\金大帅Win7\documents\visual studio 2010\Projects\集合\集合接口和集合类\obj\x86\Debug\集合接口和集合类.exe
+C:\Users\金大帅Win7\documents\visual studio 2010\Projects\集合\集合接口和集合类\obj\x86\Debug\集合接口和集合类.pdb
