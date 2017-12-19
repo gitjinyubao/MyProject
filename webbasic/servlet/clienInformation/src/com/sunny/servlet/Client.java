@@ -83,6 +83,7 @@ public class Client extends HttpServlet {
 		}
 		
 		// getParameterValues(): 获得相同名称参数的所有值
+		// request.getParameterValues("likes") 可以获得（复选框）checkbox的多个选中项
 		String[] parameterValues = request.getParameterValues("userName");
 		for(String value : parameterValues) {
 			System.out.println(value);
