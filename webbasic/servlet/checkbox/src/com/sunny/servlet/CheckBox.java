@@ -14,6 +14,9 @@ public class CheckBox extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String country = request.getParameter("country");
+		System.out.println(country);
+		
 		// 通过getParameterValues("likes")获得复选框选择的值
 		String[] likes = request.getParameterValues("likes");
 		
