@@ -1,0 +1,13 @@
+Eclipse运行错误：Failed to load the JNI shared library....：
+原因：这个问题一般是eclipse和JDK位数不一样
+解决：
+  1.查看jdk位数：
+    cmd->java -version:
+    在命令行中输入java -version ,查看JDK是多少位，一般显示64位的就是64为JDK，未显示的一般为32位的JDK。下图中显示64位，说明是64位JDK。
+  2.查看eclipse位数
+    打开eclipse的安装目录，右击eclipse.ini文件以记事本的方式打开。查看--launcher.library下面的一行，
+    如果显示的是win32.x86则表明eclipse是32位的，如果显示的win32.x86_64，则是64位的。从下图可知，这个eclipse是32位的，
+    所以JDK与eclipse不兼容，会出现Failed to load the JNI shared library这个问题。
+
+
+
