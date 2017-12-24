@@ -1,0 +1,8 @@
+maven编译时出现读取XXX时出错invalid LOC header (bad signature)：
+        右击pom.xml，run as —> maven install，会看到console中有时报mavenRepository\repos\org\mortbay\jetty\servlet-api-2.5\6.1H.14.1\servlet-api-2.5-6.1H.14.1.jar
+    时出错等某些包的报错等类似信息，pom.xml显示红叉。
+    
+    原因分析：该包没有下载正确
+
+    解决办法：1.找到该包的目录，删除该包 2.选择maven项目，右键maven-》update project
+    

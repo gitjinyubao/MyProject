@@ -1,0 +1,8 @@
+spring Boot -- Spring Data Jpa 总结 --- 持久化操作
+----------------------------------
+1.需要添加相应的依赖包;
+2.需要在application.properties文件添加配置信息；
+3.需要创建一个实体类，比如Cat
+4.需要创建一个接口继承CrudRepository
+5.需要创建一个Service
+6.需要创建一个controoller

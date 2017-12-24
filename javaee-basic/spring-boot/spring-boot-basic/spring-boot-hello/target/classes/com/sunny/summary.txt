@@ -1,0 +1,64 @@
+1.新建一个controller类
+
+2.编写spring boot 启动类
+
+3.进行访问测试，默认端口号是8080
+
+4.热部署是什么
+	大家都知道在项目开发过程中，常常会改动页面数据或者修改数据结构，为了显示改动效果，
+		往往需要重启应用查看改变效果，其实就是重新编译生成了新的 Class 文件，这个文件里记录着和代码等对应的各种信息，
+		然后 Class 文件将被虚拟机的 ClassLoader 加载。
+		而热部署正是利用了这个特点，它监听到如果有 Class 文件改动了，就会创建一个新的 ClaassLoader 进行加载该文件，
+		经过一系列的过程，最终将结果呈现在我们眼前。
+          操作：
+          pom.xml添加节点<build></build>
+          热部署之后的运行方式：(三种，这里介绍一种常用的)
+        1.使用spring-boot:run
+          run as -->  Maven builder(第二个) --> Goals:spring-boot:run	
+        2.vm中添加：（run as --> run confiugration... --> JRE --> vm中添加） 
+          lib目录中添加jar包(springloaded-1.2.4.RELEASE.jar)
+      	  -javaagent:.\lib\springloaded-1.2.4.RELEASE.jar -noverify
+      	《《《上述两种方法对于添加新的方法热部署不适用》》
+      	3.spring-boot-devtools:
+      	  原理：
+      	    1.发现代码有更改之后，重新启动应用，但是速度比手动停止再启动要快一些，更快不是指操作节约出来的时间。
+      	    2.使用了两个classLoader，一个classLoader加载那些不会改变的类（第三方jar包），
+      	               另外一个classLoader加载会更改的类称为restart ClassLoader
+      	               这样在代码更改的时候，原来的restart ClassLoader被丢弃，
+      	               重新创建一个restart ClassLoader,由于需要加载 的类相比较少，所以实现了较快的重启时间（5秒以内） 
+      	 操作： 
+      	    1.添加依赖包
+      	      	<!-- spring boot devtools 依赖包. -->
+		        <dependency>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-devtools</artifactId>
+		            <optional>true</optional>
+		           <scope>true</scope>
+		        </dependency>
+      	    2.添加相对应的plugin
+      	       <!-- 这是spring boot devtool plugin 热部署3 常用-->
+	            <plugin>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-maven-plugin</artifactId>
+	                <configuration>
+	                      <!--fork :  如果没有该项配置，这个devtools不会起作用，即应用不会restart -->
+	                    <fork>true</fork>
+	                </configuration>
+	            </plugin>
+	            
+	         触发条件：
+	         修改类（/增加类）--->保存-->restart（应用重启）
+	         修改配置文件--->保存-->restart（应用重启）
+	         修改页面--->保存-->restart（应用重启,页面刷新原理：spring.thymeleaf.cache设为false）
+	         
+	         说明：
+	         1.devtools会监听classpath下的文件变动，
+	                           并且会立即重启应用（发生在保存时机），注意：因为其采用虚拟机机制，该项重启很快
+	         2.devtools可以实现页面热部署（即页面修改后会立即生效，
+	                            这个可以直接在application.properties文件中进行配置，
+	           spring.thymeleaf.cache=fals来实现（注意：不同的模板配置不一样））
+	     
+      	    
+      	
+    
+		
