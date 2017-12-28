@@ -1,8 +1,8 @@
 使用密钥匙的clone:
 建立仓库->远程仓库：
 1.初始化git:
-	git config --global user.name "jinyubaodebaobei"
-	git config --global user.email "2045279403@qq.com"
+	git config --global user.name "jinyubaodebaobei"       git config --global user.name "13971501571"
+	git config --global user.email "2045279403@qq.com"     git config --global user.email "1345551624@qq.com"
 	初始化一次即可；检验是否初始化成功：git config --list
 
 2.生成密钥匙并添加到git仓库
